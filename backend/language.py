@@ -1,6 +1,7 @@
 """Turkish interface responses; quoted publication text remains unmodified."""
 import json
 import requests
+import re
 
 
 def english_search_query(question):
@@ -43,3 +44,23 @@ def turkish_local_answer(result):
     if any(x['citation_id']=='CAM' for x in result['citations']):
         paragraphs.append('Grad-CAM, tahmin edilen sınıfa göre göreli pozitif katkıyı gösterir. Koyu mor/siyah düşük, turuncu orta, parlak sarı yüksek katkı anlamına gelir. Ölçek her görüntü için ayrı normalize edilir. [CAM] Normal tahmininde parlak alanlar Normal sınıfının skorunu destekler. Renkler tümör varlığını, sınırını, şiddetini veya piksel başına olasılığı göstermez. Bindirme, bu kaba katkı haritasını radyografinin üzerine yerleştirir. Asistan yalnızca yapılandırılmış sonuçları alır; görüntü piksellerinden anatomik bulgu belirleyemez.')
     return {**result, 'answer':'\n\n'.join(paragraphs), 'notice':'Yalnızca araştırma amaçlıdır. Görüntü pikselleri dil modeline verilmez.'}
+
+
+def ensure_turkish_response(answer, cited_ids, evidence):
+    """Fail transparently to exact source quotations when the small model ignores Turkish."""
+    turkish = re.findall(r'\b(?:bir|ve|ile|için|olarak|olan|bu|kemik|tümör|kaynak|gibi)\b', answer.casefold())
+    english = re.findall(r'\b(?:the|a|and|with|from|that|which|is|are|of|in)\b', answer.casefold())
+    if len(turkish) >= 2 and len(turkish) >= len(english):
+        return answer, cited_ids
+    # Never relabel English generated prose as a Turkish explanation. An exact
+    # quote is auditable and cannot introduce clinical claims absent from evidence.
+    chosen = evidence[:2]
+    quotations=[]
+    for item in chosen:
+        sentences=re.split(r'(?<=[.!?])\s+',item['text'].strip())
+        passage=' '.join(sentences[:2])
+        quotations.append(f'“{passage}” [{item["citation_id"]}]')
+    return ('Model bu soru için güvenilir bir Türkçe açıklama üretemedi. '
+            'Aşağıda aramada bulunan kaynaklardan özgün dilinde birebir alıntılar sunulmuştur; '
+            'bunlar tam bir yanıt veya tanı değildir.\n\n'+'\n\n'.join(quotations),
+            [item['citation_id'] for item in chosen])

@@ -12,6 +12,8 @@ Use the **English / Türkçe** controls in the header. The choice persists in th
 
 The report analyser also offers **34 attributed CC BY 4.0 published case excerpts**, independent of the 60 BTXRD image records.
 
+The small Qwen model can fail to follow the requested language or produce unreliable prose. If it returns English for a Turkish request, the assistant gives a Turkish explanation of that limitation and exact original-source quotations instead. Existing conversation messages are not retroactively translated when the interface language changes. Citation presence does not establish clinical accuracy.
+
 ## Public deployment
 
 See [DEPLOYMENT.md](DEPLOYMENT.md). Production uses one HTTPS origin for the frontend and API. Private uploads, credentials, model weights, vector databases and generated bundles are excluded from this repository. Publishing this source does not itself deploy the backend.

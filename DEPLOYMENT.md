@@ -20,6 +20,32 @@ A static host cannot run the current Python/PyTorch/Chroma/Ollama stack. As chec
 
 A Cloudflare Quick Tunnel can provide a temporary free HTTPS demo URL while this computer is running. It is not independent hosting, has no uptime guarantee, and its URL changes after restarting: https://developers.cloudflare.com/tunnel/get-started/quick-tunnels/ . A permanent independent site requires a suitable server/account (for example university infrastructure).
 
+## Start and stop this Windows workspace
+
+The configured environment and verified portable Cloudflare helper are already present on the owner's computer. From a PowerShell terminal in the project directory:
+
+```powershell
+.\deploy\Start-PublicDemo.ps1
+```
+
+Keep that terminal running. It prints the new HTTPS URL. The current URL and process IDs are also recorded in `deploy/runtime/public-demo.json` (excluded from Git). Closing VS Code is safe only if it does not close the terminal running the launcher. The demo initially started by Codex runs in the background.
+
+Alternatively, run Python directly without changing PowerShell's script policy:
+
+```powershell
+& "$env:USERPROFILE\OsteoLens-rag-env\Scripts\python.exe" .\deploy\start_public_demo.py --cloudflared "..\OsteoLens-work\tools\cloudflared.exe"
+```
+
+To stop the background demo or an existing launcher before restarting:
+
+```powershell
+.\deploy\Stop-PublicDemo.ps1
+```
+
+The stop script checks the launcher's process identity and stops only its process tree. It does not stop the separate local API on port 8000 or Ollama. After stopping, use the start command to obtain a new URL. Keep the computer awake and connected to the internet; this is a temporary public demo, not an independently hosted production service.
+
+On a different computer, provide the configured Python environment and the [official Cloudflare executable](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/downloads/) using the scripts' `-Python` and `-Cloudflared` parameters. The helper is excluded from Git.
+
 ## Acceptance checks
 
 1. Open the public HTTPS URL in a fresh browser, switch English/Türkçe and reload.

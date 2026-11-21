@@ -36,6 +36,12 @@ class PublicAccessMiddleware:
             return await self.app(scope, receive, send)
         from starlette.requests import Request
         request = Request(scope, receive)
+        try:
+            length = int(request.headers.get('content-length', '0'))
+        except ValueError:
+            return await JSONResponse({'detail': 'Invalid content length.'}, 400)(scope, receive, send)
+        if length > 21*1024*1024:
+            return await JSONResponse({'detail': 'Request body is too large.'}, 413)(scope, receive, send)
         origin = request.headers.get('origin')
         if origin and origin != PUBLIC_ORIGIN:
             return await JSONResponse({'detail': 'Origin not permitted.'}, 403)(scope, receive, send)
@@ -73,6 +79,34 @@ class PublicAccessMiddleware:
                 message = {**message, 'headers': headers}
             await send(message)
         try:
+            if expensive:
+                chunks = []
+                size = 0
+                deadline = time.monotonic() + 45
+                while True:
+                    try:
+                        message = await asyncio.wait_for(receive(), timeout=max(.01,deadline-time.monotonic()))
+                    except asyncio.TimeoutError:
+                        return await JSONResponse({'detail': 'Upload timed out.'}, 408)(scope, receive, secure_send)
+                    if message['type'] == 'http.disconnect':
+                        return
+                    chunk = message.get('body', b'')
+                    size += len(chunk)
+                    if size > 21*1024*1024:
+                        return await JSONResponse({'detail': 'Request body is too large.'}, 413)(scope, receive, secure_send)
+                    chunks.append(chunk)
+                    if not message.get('more_body', False):
+                        break
+                original_receive = receive
+                delivered = False
+                body = b''.join(chunks)
+                async def buffered_receive():
+                    nonlocal delivered
+                    if not delivered:
+                        delivered = True
+                        return {'type':'http.request', 'body':body, 'more_body':False}
+                    return await original_receive()
+                receive = buffered_receive
             if now-self.last_cleanup > 300:
                 self.last_cleanup = now
                 from backend.report_store import purge_expired_reports

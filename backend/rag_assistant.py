@@ -362,6 +362,9 @@ def answer_question(question: str, *, case_id: str | None = None, model_result: 
     for index, item in enumerate(retrieved, start=1):
         item["citation_id"] = f"S{index}"
     answer, cited_ids = _generate(question, retrieved, case_context, safe_history, report_context, language='tr') if language == 'tr' else _generate(question, retrieved, case_context, safe_history, report_context)
+    if language == 'tr':
+        from backend.language import ensure_turkish_response
+        answer, cited_ids = ensure_turkish_response(answer, cited_ids, retrieved)
     valid = {item["citation_id"] for item in retrieved}
     if included_report and included_report["has_matching_passages"]:
         valid.add("RPT")

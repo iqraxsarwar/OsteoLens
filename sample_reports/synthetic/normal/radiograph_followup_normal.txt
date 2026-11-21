@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Normal follow-up radiograph
+MODALITY / DOCUMENT TYPE: Follow-up radiograph
+
+Comparison is made with the prior synthetic radiograph dated 2025-01-10. The previously described cortical irregularity is not reproduced. No focal bone lesion or acute fracture is seen. Impression: no progressive osseous finding in this fictional follow-up example.

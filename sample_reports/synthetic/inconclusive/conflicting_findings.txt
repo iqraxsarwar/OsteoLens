@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Conflicting findings
+MODALITY / DOCUMENT TYPE: MRI report
+
+The findings section of this fictional report describes an intact cortex and no soft-tissue component. The impression section states that cortical breakthrough with a soft-tissue mass is present. These statements conflict within the supplied synthetic text. No clarification or final diagnosis is provided.

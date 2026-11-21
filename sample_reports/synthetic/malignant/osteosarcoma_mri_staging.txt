@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Osteosarcoma MRI staging
+MODALITY / DOCUMENT TYPE: MRI report
+
+MRI of the synthetic distal femur describes marrow replacement over 11 cm, cortical breach, and an extraosseous soft-tissue component. The neurovascular bundle is reported as separate from the lesion. Findings are concerning for a primary bone malignancy; histology and staging results are not included.

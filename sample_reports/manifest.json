@@ -1,0 +1,255 @@
+{
+  "notice": "SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD",
+  "licensing": "All reports are fictional synthetic test content generated specifically for OsteoLens. They are not derived from real patient records or copied from published reports. No BTXRD case is associated automatically.",
+  "unique_scenarios": 25,
+  "documents": [
+    {
+      "path": "synthetic/normal/radiograph_normal.txt",
+      "title": "Normal radiograph",
+      "document_type": "Bone radiograph",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/normal/radiograph_followup_normal.txt",
+      "title": "Normal follow-up radiograph",
+      "document_type": "Follow-up radiograph",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/benign/osteochondroma_xray.txt",
+      "title": "Osteochondroma radiograph",
+      "document_type": "Bone radiograph",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/benign/osteochondroma_mri.txt",
+      "title": "Osteochondroma MRI",
+      "document_type": "MRI report",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/benign/giant_cell_tumour_mri.txt",
+      "title": "Giant cell tumour MRI",
+      "document_type": "MRI report",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/benign/giant_cell_tumour_ct.pdf.txt",
+      "title": "Giant cell tumour CT",
+      "document_type": "CT report",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/benign/simple_bone_cyst_xray.txt",
+      "title": "Simple bone cyst radiograph",
+      "document_type": "Bone radiograph",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/benign/aneurysmal_bone_cyst_mri.txt",
+      "title": "Aneurysmal bone cyst MRI",
+      "document_type": "MRI report",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/benign/enostosis_ct.txt",
+      "title": "Enostosis CT",
+      "document_type": "CT report",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/malignant/osteosarcoma_xray.txt",
+      "title": "Osteosarcoma radiograph",
+      "document_type": "Bone radiograph",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/malignant/osteosarcoma_mri_staging.txt",
+      "title": "Osteosarcoma MRI staging",
+      "document_type": "MRI report",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/malignant/ewing_sarcoma_mri.txt",
+      "title": "Ewing sarcoma MRI",
+      "document_type": "MRI report",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/malignant/chondrosarcoma_ct.txt",
+      "title": "Chondrosarcoma CT",
+      "document_type": "CT report",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/malignant/histopath_osteosarcoma.txt",
+      "title": "Osteosarcoma histopathology",
+      "document_type": "Histopathology report",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/malignant/oncology_consult.txt",
+      "title": "Oncology consultation",
+      "document_type": "Oncology consultation",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/malignant/followup_posttreatment.txt",
+      "title": "Post-treatment follow-up",
+      "document_type": "Oncology follow-up",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/inconclusive/inconclusive_mri.txt",
+      "title": "Indeterminate MRI lesion",
+      "document_type": "MRI report",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/incomplete/missing_diagnosis.txt",
+      "title": "Report without diagnosis",
+      "document_type": "Bone radiograph",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/incomplete/poorly_structured.txt",
+      "title": "Poorly structured report",
+      "document_type": "Unstructured imaging note",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/inconclusive/conflicting_findings.txt",
+      "title": "Conflicting findings",
+      "document_type": "MRI report",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/incomplete/unsupported_terminology.txt",
+      "title": "Unsupported terminology",
+      "document_type": "Imaging report",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/normal/no_malignancy_mention.txt",
+      "title": "No mention of malignancy",
+      "document_type": "Bone radiograph",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/malignant/pathologic_fracture.txt",
+      "title": "Pathologic fracture report",
+      "document_type": "CT report",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/malignant/metastatic_lesion.txt",
+      "title": "Secondary bone lesion",
+      "document_type": "Oncology imaging note",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/benign/osteoid_osteoma_ct.txt",
+      "title": "Osteoid osteoma CT",
+      "document_type": "CT report",
+      "format": "TXT",
+      "source_status": "synthetic",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/normal/radiograph_normal.pdf",
+      "title": "Normal radiograph (PDF text extraction variant)",
+      "document_type": "PDF",
+      "format": "PDF",
+      "source_status": "synthetic format variant",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/benign/osteochondroma_xray.pdf",
+      "title": "Osteochondroma radiograph (PDF text extraction variant)",
+      "document_type": "PDF",
+      "format": "PDF",
+      "source_status": "synthetic format variant",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/malignant/osteosarcoma_xray.pdf",
+      "title": "Osteosarcoma radiograph (PDF text extraction variant)",
+      "document_type": "PDF",
+      "format": "PDF",
+      "source_status": "synthetic format variant",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/inconclusive/inconclusive_mri.pdf",
+      "title": "Indeterminate MRI lesion (PDF text extraction variant)",
+      "document_type": "PDF",
+      "format": "PDF",
+      "source_status": "synthetic format variant",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/scanned_ocr/simple_bone_cyst_scanned_style.pdf",
+      "title": "Simple bone cyst scanned-style OCR fixture",
+      "document_type": "Scanned-style PDF",
+      "format": "image-only PDF",
+      "source_status": "synthetic format variant",
+      "license": "Project-created synthetic content"
+    },
+    {
+      "path": "synthetic/incomplete/empty_report.txt",
+      "title": "Empty report validation fixture",
+      "document_type": "Empty invalid-input fixture",
+      "format": "empty TXT",
+      "source_status": "synthetic invalid-input fixture; intentionally zero bytes",
+      "license": "Project-created synthetic content"
+    }
+  ]
+}

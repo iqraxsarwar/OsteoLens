@@ -1,0 +1,50 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Full BTXRD data and model artifacts (kept outside the source repo)
+training/data/
+training/outputs/
+training/.cache/
+backend/data/rag/
+backend/data/reports/
+*.pth
+*.pt
+__pycache__/
+*.py[cod]
+
+# Credentials, private uploads, local runtimes and generated bundles
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+.secrets/
+*.pem
+*.key
+*.sqlite*
+*.db
+*.zip
+deploy/runtime/
+backend/data/public-reports/

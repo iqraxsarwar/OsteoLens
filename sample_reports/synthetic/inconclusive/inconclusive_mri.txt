@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Indeterminate MRI lesion
+MODALITY / DOCUMENT TYPE: MRI report
+
+An indeterminate marrow lesion is present in the synthetic proximal fibula. Signal characteristics are not specific. No cortical breakthrough is identified. The report recommends correlation with radiographs and interval imaging; no diagnosis is stated.

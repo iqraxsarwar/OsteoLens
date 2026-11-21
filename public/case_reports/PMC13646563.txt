@@ -1,0 +1,21 @@
+Published case report excerpt
+Delayed Metachronous Multicentric Giant Cell Tumor of Bone after a 16-Year Disease-Free Interval: A Case Report
+Sankhwar D, Yadav P, Mridha A, George J, Shankar V, Kumar V.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC13646563/
+CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Case sections extracted from the published article.
+
+Case Report
+A 48-year-old man presented with progressively worsening left hip pain of several months’ duration. Sixteen years earlier, he had undergone wide resection of a giant cell tumor (GCT) involving the proximal right humerus, followed by endoprosthetic reconstruction (Fig. 1). Histopathological examination at that time confirmed a conventional GCT without evidence of malignant transformation. The patient remained asymptomatic and under regular surveillance for more than a decade.
+
+Plain radiographs and NCCT of the pelvis demonstrated a large expansile osteolytic lesion involving the left periacetabular region and adjacent iliac bone, with cortical breach and involvement of the proximal femur. Additional lytic lesions were present in the bilateral proximal femora and right iliac bone. The imaging findings raised the possibility of multicentric giant cell tumor (GCT), although metastatic disease and hyperparathyroidism-related brown tumors were also considered in the differential diagnosis (Fig. 2).
+
+Whole-body positron emission tomography–computed tomography (PET-CT) demonstrated metabolically active lytic lesions involving the bilateral femoral neck and bilateral iliac bones with increased fluorodeoxyglucose uptake. No pulmonary metastases or additional skeletal lesions were identified, favoring a diagnosis of metachronous multicentric giant cell tumor rather than disseminated metastatic disease (Fig. 3).
+
+Histopathological examination of the pelvic lesion revealed a highly cellular neoplasm composed of numerous uniformly distributed osteoclast-like multinucleated giant cells within a background of mononuclear stromal cells. The stromal cells were round to oval with focal spindle-cell morphology and displayed fine chromatin, inconspicuous nucleoli, and pale eosinophilic cytoplasm. Foci of hemorrhage were also present. Immunohistochemistry demonstrated strong positivity for H3F3A G34W, confirming the diagnosis of conventional giant cell tumor of bone (Fig. 4).
+
+As part of the diagnostic evaluation of multiple osteolytic lesions, serum calcium, phosphorus, alkaline phosphatase, and parathyroid hormone (PTH) levels were assessed and found to be within normal limits. These findings helped exclude metabolic conditions such as brown tumors secondary to hyperparathyroidism as potential differential diagnoses [8,9].
+
+Given the multicentric involvement of the pelvis and proximal femur, the anatomically complex periarticular location of the lesions, and the significant morbidity associated with extensive surgical resection and reconstruction, a non-operative treatment strategy was considered most appropriate. The patient was treated with six intravenous infusions of zoledronic acid (4 mg/dose) at monthly intervals. The patient was supplemented with calcium and Vitamin D and was monitored clinically and radiologically during treatment. Therapy was well tolerated, with no treatment-related adverse events.
+
+Clinical and radiographic follow-up was performed at 3-month intervals during the 1st year, every 6 months during the 2nd year, and annually thereafter. Serial annual pelvic radiographs demonstrated a sustained radiological response to therapy. The initially expansile osteolytic lesion showed progressive peripheral and intralesional sclerosis, gradual trabecular reconstitution, and stabilization of lesion margins over time. At final follow-up, marked sclerosis and osseous remodeling were evident without radiographic signs of progression (Fig. 5). Clinically, the patient experienced complete resolution of pain within 3 months of initiating treatment and returned to unrestricted functional activity. At the latest follow-up, 4 years after treatment initiation, there was no evidence of local progression, pulmonary metastasis, or development of new skeletal lesions.

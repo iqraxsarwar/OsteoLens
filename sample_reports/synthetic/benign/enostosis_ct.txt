@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Enostosis CT
+MODALITY / DOCUMENT TYPE: CT report
+
+A small, sharply marginated sclerotic focus is present in the synthetic iliac bone. No cortical destruction or soft-tissue component is seen. Impression: likely enostosis in this fictional example. No prior study is supplied for comparison.

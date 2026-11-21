@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Normal radiograph
+MODALITY / DOCUMENT TYPE: Bone radiograph
+
+The synthetic left femur radiograph shows preserved alignment and mineralisation. No focal lytic or sclerotic lesion, cortical destruction, periosteal reaction, or fracture is identified. Impression: no focal osseous abnormality in this fictional example.

@@ -1,0 +1,17 @@
+Published case report excerpt
+First Reported Case of Nodular Fasciitis with Intraosseous Patellar Involvement: A Case Report
+Riley Dylan J, Gonzalez Fernando O., Blank Alan T
+https://pmc.ncbi.nlm.nih.gov/articles/PMC13740994/
+CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Case sections extracted from the published article.
+
+Case Report
+A 67-year-old male with a medical history significant for gout and stage IV follicular lymphoma presented to a sports medicine clinic with a 6-month history of progressively worsening right anterior knee pain. He had been previously treated at an outside hospital with corticosteroid injections and knee aspiration, which demonstrated no evidence of infection or gout. The patient described sharp, stabbing anterior knee pain that was exacerbated with knee flexion and walking.
+
+Magnetic resonance imaging with and without contrast was performed, revealing a 2.1 cm × 1.3 cm × 1.9 cm heterogeneous soft tissue mass in the subpatellar region of the right knee. The lesion was hyperintense on T2-weighted images with internal nodularity and peripheral enhancement. Notably, the mass demonstrated cortical erosion into the undersurface of the patella (Fig. 1). Given the patients’ oncologic history and the aggressive imaging features, the differential diagnosis included metastatic disease, primary soft-tissue neoplasms, such as tenosynovial giant cell tumor or synovial chondromatosis, gouty arthritis, and, less likely, degenerative arthropathy.
+
+The magnetic resonance imaging (MRI) findings prompted a referral to orthopedic oncology, where, following a multidisciplinary tumor board meeting, the patient underwent an image-guided biopsy by interventional radiology. Histopathologic examination revealed a hypercellular lesion composed of spindled cells with mild atypia and minimal mitotic activity in a myxoid background that contained occasional erythrocytes and giant cells (Fig. 2). While the morphology was suggestive of nodular fasciitis, the intra-articular location and osseous involvement were highly atypical. Fluorescence in situ hybridization (FISH) for USP6 was therefore performed and demonstrated a rearrangement at 17p13, confirming the diagnosis of nodular fasciitis.
+
+Given the patient’s refractory pain to conservative management and associated bony involvement, surgical excision was recommended. An incision was made over the anterior right knee, and a medial parapatellar arthrotomy was performed. Upon entering the joint, nodular synovitis and copious amounts of synovial fluid were found. The mass was identified arising from the subpatellar region and extending into the inferior portion of the patella. The lesion was excised using electrocautery and curettage of the patella. The joint was thoroughly irrigated and closed in layers.
+
+Final pathology was consistent with the pre-operative diagnosis of nodular fasciitis involving both the subpatellar soft tissues and the intraosseous patellar component. At 2-week post-operative follow-up, the patient reported significant improvement in pain without complications.

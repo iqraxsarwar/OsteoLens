@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Oncology consultation
+MODALITY / DOCUMENT TYPE: Oncology consultation
+
+This fictional consultation records referral for an aggressive proximal tibial lesion described on outside imaging. The referring differential includes osteosarcoma and Ewing sarcoma. The source images and pathology are not available to this note. Plan recorded in this synthetic example: multidisciplinary review and biopsy planning.

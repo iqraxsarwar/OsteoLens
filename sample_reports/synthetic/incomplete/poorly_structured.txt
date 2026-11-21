@@ -1,0 +1,7 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Poorly structured report
+MODALITY / DOCUMENT TYPE: Unstructured imaging note
+
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+XR tibia. metaphysis? lucency noted. Cortex maybe intact. Comparison none. Recommend MRI if clinically needed. diagnosis not entered.

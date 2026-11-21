@@ -1,0 +1,37 @@
+Published case report excerpt
+Arthroscopic Piecemeal Excision of a Large Intra-articular Infrapatellar Osteochondroma of the Knee: A Case Report
+Jetaji N, Sami S, Babu R, Rajoli S.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC13646465/
+CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Case sections extracted from the published article.
+
+Case Report
+A 46-year-old Filipino female presented with a 6-month history of progressive pain and swelling in the left knee. The pain was of gradual onset, dull in character, and of moderate intensity, occasionally radiating to the left lower limb. Symptoms were aggravated by activity, knee movement, and weight-bearing, and were partially relieved by rest and analgesic medication. The patient also reported swelling, stiffness, intermittent locking, and occasional giving-way episodes, resulting in significant functional limitation including difficulty walking, climbing stairs, and performing daily activities. There was no history of trauma or previous knee surgery. No relevant past medical history or comorbidities were noted.
+
+On physical examination, there was visible fullness over the anterior aspect of the left knee, particularly in the infrapatellar region. The swelling was firm to hard in consistency, fixed to the underlying structures, and non-fluctuant. The overlying skin was normal with no signs of inflammation. Knee ROM was restricted, with an extension lag of 20° and flexion limited to 110°. A painful click was elicited during terminal extension. Joint line tenderness was absent, and ligamentous stability tests were unremarkable. Meniscal tests were negative.
+
+Plain radiographs (Fig. 1) of the left knee demonstrated a well-defined ossified mass in the infrapatellar region within the joint space, appearing similar in size to the patella.
+
+A preoperative non-contrast magnetic resonance imaging (MRI) (Figs. 2 and 3) of the left knee identified a 2.6 × 2.7 × 2.2 cm corticated, T1- and T2-hypointense mass in the infrapatellar fat pad, featuring a thin T2-hyperintense and T1-isointense rim consistent with a cartilaginous surface. Associated smaller foci, edematous changes, and synovial thickening suggested juxta-articular chondromas, with secondary findings including minimal joint effusion and Grade 1 anterior cruciate ligament signal alteration. Multiple smaller osteocartilaginous loose bodies were also identified within the joint cavity. No meniscal tear was observed. The presence of multiple loose bodies argues against a diagnosis of extraskeletal para-articular osteochondroma.
+
+Based on imaging findings, the provisional diagnosis was osteocartilaginous loose bodies with synovial hypertrophy, suggestive of a juxta-articular chondroma. The differential diagnoses considered at this stage included extraskeletal para-articular osteochondroma, synovial osteochondromatosis, Trevor’s disease, and chondrosarcoma. The absence of multiple lesions in the synovium, the patient’s age, and the absence of skeletal dysplasia made synovial osteochondromatosis and Trevor’s disease less likely. The well-defined corticated margins and absence of aggressive features on MRI argued against chondrosarcoma. Intraoperative findings and histopathological examination subsequently confirmed the diagnosis of a large intra-articular infrapatellar osteochondroma.
+
+The patient underwent arthroscopic excision of the infrapatellar intracapsular osteochondroma under spinal anesthesia. She was positioned supine on the operating table with a pneumatic tourniquet applied to the proximal thigh. The tourniquet was inflated to 250 mmHg. The operative limb was prepared and draped in the usual sterile manner.
+
+Due to the mass effect produced by the infrapatellar lesion, arthroscopic portals were established 5–10 mm more lateral and medial, respectively, relative to the standard anterolateral and anteromedial portals, based on palpation of the soft spot. This modification was necessary to improve visualization and instrument maneuverability within the anterior compartment. A diagnostic arthroscopy was initially performed to evaluate the intra-articular structures.
+
+An intracapsular osteochondroma arising from the region deep to the infrapatellar fat pad was identified. The lesion was surrounded by synovial tissue and partially obscured by the hypertrophic fat pad. Careful synovial debridement was performed using an arthroscopic shaver and radiofrequency probe to expose the margins of the tumor (Fig. 4). Throughout the procedure, clear identification and protection of the patellar tendon were maintained, as meticulous delineation of this structure was critical to avoid inadvertent injury during resection.
+
+Once the lesion was adequately exposed and demarcated, the osteochondroma was carefully freed from the surrounding synovium. Arthroscopic shavers and burrs were used to progressively thin the lesion in a controlled piecemeal fashion, reducing its bulk and facilitating safe removal (Fig. 5). The ossified core was particularly dense and required an arthroscopic burr for debulking. After sufficient reduction in size, the residual tumor fragments were retrieved through a small medial parapatellar mini-incision, allowing complete excision of the mass.
+
+The joint was subsequently inspected arthroscopically to confirm complete removal of the lesion and to ensure that the patellar tendon and surrounding structures remained intact. The joint was thoroughly irrigated to remove debris, hemostasis was achieved, and the arthroscopic portals were closed in standard fashion. Total tourniquet time was 120 min. There were no intraoperative complications.
+
+Delineate and define the patellar tendon with electrocautery at low power while excising the anterior part of the mass
+
+Place portals at the palpable soft spots slightly medial and lateral compared to the standard portals, to accommodate the mass-occupying lesion obstructing standard portal placement
+
+Perform a complete arthroscopic knee examination to rule out loose bodies hidden in the gutters and posterior compartment.
+
+Postoperatively, the patient was allowed full weight-bearing and early mobilization. At 6–8 weeks, the extension lag had improved from 20° to 10°, and knee flexion had improved from 110° to approximately 150°. Visual analogue scale score on flexion and attempted terminal extension was 7/10 preoperatively, reducing to 1/10 on flexion and 2/10 on extension at 5-month follow-up.
+
+Histopathological examination of the excised specimen revealed sections from the left knee intracapsular mass lesion comprising a hyaline cartilaginous cap of maximum thickness 5 mm, covered by fibro-collagenous tissue with myxoid change. The underlying bone trabeculae were prominent and variably widened, with intervening fatty marrow displaying areas of fat necrosis and calcification. Some tissue fragments appeared infarcted. No features of malignancy were identified (Fig. 6). These findings were consistent with a diagnosis of osteochondroma.

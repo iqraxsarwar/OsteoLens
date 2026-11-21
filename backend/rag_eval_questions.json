@@ -1,0 +1,29 @@
+{
+  "evaluation_note": "Question-only retrieval/generation review set. This is not used by the runtime to answer user questions and contains no expected answers. Citation correctness must be checked against retrieved excerpts; clinical adequacy requires qualified review.",
+  "questions": [
+    {"id":"Q01","category":"simple","question":"What is osteosarcoma?","evidence_terms":["osteosarcoma","bone"]},
+    {"id":"Q02","category":"paraphrase","question":"In plain terms, what does it mean when a bone cancer is osteogenic?","evidence_terms":["osteosarcoma","bone"]},
+    {"id":"Q03","category":"imaging","question":"What radiographic patterns are described for osteosarcoma?","evidence_terms":["osteosarcoma","imaging"]},
+    {"id":"Q04","category":"imaging","question":"Why can a sunburst periosteal reaction be mentioned in osteosarcoma literature?","evidence_terms":["osteosarcoma","periosteal"]},
+    {"id":"Q05","category":"differential","question":"How does Ewing sarcoma differ from osteosarcoma at a high level?","evidence_terms":["ewing","osteosarcoma"]},
+    {"id":"Q06","category":"simple","question":"What is Ewing sarcoma and who is commonly affected?","evidence_terms":["ewing","children"]},
+    {"id":"Q07","category":"diagnosis","question":"What imaging is used when Ewing sarcoma is suspected?","evidence_terms":["ewing","imaging"]},
+    {"id":"Q08","category":"treatment","question":"What treatment approaches are discussed for Ewing sarcoma?","evidence_terms":["ewing","treatment"]},
+    {"id":"Q09","category":"simple","question":"What does chondrosarcoma refer to?","evidence_terms":["chondrosarcoma","cartilage"]},
+    {"id":"Q10","category":"imaging","question":"What imaging features and modalities are reviewed for osteosarcoma?","evidence_terms":["osteosarcoma","radiograph","MRI"]},
+    {"id":"Q11","category":"benign","question":"Can a benign bone tumour still behave aggressively locally? Give a sourced example.","evidence_terms":["giant cell tumor","aneurysmal bone cyst"]},
+    {"id":"Q12","category":"benign","question":"What is an aneurysmal bone cyst and how is it assessed?","evidence_terms":["aneurysmal bone cyst","imaging"]},
+    {"id":"Q13","category":"diagnosis","question":"Why is biopsy planning important when a primary bone sarcoma is suspected?","evidence_terms":["biopsy","orthopedic oncologist"]},
+    {"id":"Q14","category":"diagnosis","question":"How do imaging and pathology contribute different information to bone tumour diagnosis?","evidence_terms":["imaging","biopsy"]},
+    {"id":"Q15","category":"terminology","question":"What is a wide zone of transition in a bone lesion?","evidence_terms":["zone of transition","bone"]},
+    {"id":"Q16","category":"terminology","question":"Does an aggressive radiographic appearance prove a specific tumour type?","evidence_terms":["radiographic","diagnosis"]},
+    {"id":"Q17","category":"AI","question":"What are the limitations of deep-learning classification of bone tumours on radiographs?","evidence_terms":["deep learning","radiograph"]},
+    {"id":"Q18","category":"AI","question":"How have clinical metadata and X-ray images been combined in bone tumour AI research?","evidence_terms":["metadata","classification"]},
+    {"id":"Q19","category":"follow-up","question":"What is the role of MRI after the initial radiograph?","evidence_terms":["MRI","radiograph"]},
+    {"id":"Q20","category":"follow-up","question":"And what does that MRI add about the tumour's extent?","evidence_terms":["MRI","extent"],"conversation":[{"role":"user","content":"What is the role of MRI after the initial radiograph?"},{"role":"assistant","content":"MRI is used for further local assessment in the sources."}]},
+    {"id":"Q21","category":"treatment","question":"What general treatment options are described for osteosarcoma?","evidence_terms":["osteosarcoma","chemotherapy","surgery"]},
+    {"id":"Q22","category":"case-context","question":"For this selected case, what is the source label and what does the classifier predict?","evidence_terms":["source label","model prediction"],"case_id":"BTXRD-IMG001868"},
+    {"id":"Q23","category":"case-context","question":"Can you tell from this case's Grad-CAM exactly where the tumour boundary is?","evidence_terms":["Grad-CAM","boundary"],"case_id":"BTXRD-IMG001868"},
+    {"id":"Q24","category":"insufficient","question":"What exact tumour diagnosis will this private clinic give patient X next week?","expected_status":"insufficient_evidence"}
+  ]
+}

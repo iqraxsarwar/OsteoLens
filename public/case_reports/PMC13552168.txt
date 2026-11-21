@@ -1,0 +1,25 @@
+Published case report excerpt
+Askin Tumor Presents with Ewing Sarcoma of the Femur in Young Female Patient: Case Report and Literature Review
+Faroun Roua, Mashal Rania, Farhan Ne’ma, Ass’ad Omar M, Mansour Mamoun M H, Asad Diya
+https://pmc.ncbi.nlm.nih.gov/articles/PMC13552168/
+CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Case sections extracted from the published article.
+
+Case Report
+We present a case of a 12-year-old white Middle Eastern female with no significant past medical history who presented to the outpatient clinic complaining of right thigh pain and swelling associated with limping for 4 months. With normal regular pulses and normal vital signs. She has no family history of Ewing sarcoma or Askin tumor, and she denied any history of recent trauma, prolonged immobilization, or infection. Furthermore, denying any history of back pain, chest pain, chest tightness or discomfort, no fever, night sweats, or weight loss.
+
+A timeline, including symptom onset, diagnostic steps, treatment interventions, and follow-up, is provided in Table 1.
+
+On examination, it revealed an immobile, tender, tense swelling in the right thigh without any local increase in temperature. The range of motion of the joint and distal neurovascular status were normal. No palpable inguinal lymph nodes.
+
+On investigation, as shown in Table 2, white blood cells, erythrocyte sedimentation rate, and C-reactive protein were elevated. Fig. 1 revealed that a chest X-ray was done on the day of admission as a clinical protocol of the hospital.
+
+A right thigh X-ray was done, which revealed that there was about 7.5 × 5 × 5 soft-tissue lesion, also confirming a lytic bone lesion. Fig. 2 shows magnetic resonance imaging findings revealing a heterogeneous intramedullary mass lesion of the right femoral shaft with a soft-tissue component extending over a distance of 21cm in length, which appears hypointense on T1 and hyperintense on T2-weighted sequence with heterogeneous post-contrast enhancement and heavy diffusion restriction, which was associated with diffuse cortical bone destruction and large soft-tissue extraosseous extension surrounding the affected bone. Similar enhanced abnormal intramedullary signals were seen in the left iliac bone and distal right femoral metaphysis, with the largest measures up to 17 × 16 mm in the left iliac bone. Suggestive of Ewing sarcoma with bony metastasis.
+
+Fig. 3 shows a CT scan with contrast for lung, mediastinal and bone were done which presented bilateral lower lung lobe nodules: The largest on the right measures 2 cm and on the left measures 1.5 cm and permeative destructive lesion in the right 5th rib associated with large soft tissue component measuring 9 cm and subsequent consolidation of the right lower lobe, with rim of right sided pleural effusion, which raises suspicion for Askin tumor, also a lytic bone lesion in the iliac side of the left sacroiliac joint measuring 2 cm.
+
+Under sedation and ultrasound guidance, a needle biopsy was performed on the right thigh and posterior chest wall. Histopathological examination revealed microscopically small round neoplastic cells with hyperchromatic nuclei and minimal to focally moderate vacuolated cytoplasm. Mitotic activity was observed. Areas of tumor necrosis are seen; the background shows a desmoplastic reaction.
+
+On immunohistochemistry, the tumor cells were positive for CD99 (membranous), whereas desmin, myogenin, CD45, and SOX10 were negative. A final diagnosis of Ewing sarcoma of the right thigh with bone metastases and Askin tumor.
+
+Based on the patient’s history, examination findings, and previous investigation, she was scheduled for pre-operative chemotherapy management, as a vincristine, doxorubicin, cyclophosphamide protocol was done over 6 cycles of chemotherapy. Re-evaluation chest CT and X-ray demonstrated a significant decrease in the previously described right 5th rib destructive lesion with residual soft-tissue component. Subsequently, the patient underwent a radical resection of the femur tumor as follows: an intra-operative procedure. After segmental bone resection, it underwent extracorporeal radiation; fixation and reaming were done for the proximal intramedullary canal and distal intramedullary canal with preservation of the growth plate area, then the reduction and fixation of bone were checked under C-arm image; the procedure was successfully completed. Post-operative chemoradiation was done. Bone marrow biopsy and aspiration were repeated and confirmed a normocellular marrow with trilineage hematopoiesis to ensure that the patient was in good health.

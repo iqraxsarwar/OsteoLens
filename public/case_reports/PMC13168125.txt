@@ -1,0 +1,21 @@
+Published case report excerpt
+Case Report: Primary giant chondrosarcoma of the manubrium sterni
+Zhu Yinghao, Lou Yang, Chen Xianguo
+https://pmc.ncbi.nlm.nih.gov/articles/PMC13168125/
+CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Case sections extracted from the published article.
+
+Case report
+A 42-year-old man presented to the outpatient clinic with anterior chest-wall swelling and chest pain. Review of his medical history revealed that a chest CT performed in August 2023 had already indicated bone destruction of the manubrium sterni, (Figure 1); however, the patient declined treatment at that time. For the following two years, the patient underwent no further examinations or medical consultations. In November 2025, the patient returned to our hospital outpatient department due to progression of the anterior chest wall swelling and chest pain, which had become intolerable, and was subsequently admitted.
+
+Physical examination revealed a palpable mass measuring approximately 9 × 9 cm at the manubrium sterni, with no detectable pulsation. Admission laboratory studies, including a comprehensive panel of serum tumor markers, were within normal limits. Contrast-enhanced CT demonstrated bone destruction of the manubrium sterni accompanied by the formation of a soft tissue mass, with the lesion involving the clavicle, the sternal body, and the first and second ribs. SPECT revealed increased metabolic activity within the manubrium sterni.
+
+We established a multidisciplinary team (MDT) comprising specialists from thoracic surgery, orthopedics, pathology, radiology, medical oncology, and radiation oncology. Regarding the choice of biopsy approach, the patient presents with prominent imaging features suggestive of chondrosarcoma. Given that open biopsy is associated with greater invasiveness and a higher risk of complications compared with percutaneous needle biopsy, we decided to perform image-guided percutaneous needle biopsy as the initial procedure. Open biopsy will be reserved only if a definitive histopathological diagnosis cannot be achieved with percutaneous needle biopsy. A needle biopsy was subsequently performed. Microscopic examination revealed a myxoid chondroid matrix and atypical cells, confirming the diagnosis of chondrosarcoma. Consequently, a radical sternectomy was performed.
+
+During the operation, the tumor was observed to have invaded the clavicles, the sternal body, and the first and second ribs. We resected the medial one-third of both clavicles, the superior one-third of the sternal body, along with the anterior portions of the first and second ribs and the involved musculature. Fortunately, the tumor did not involve the aortic arch or the innominate vein, thus eliminating the need for cardiopulmonary bypass or prosthetic vascular graft replacement. No significant intraoperative hemorrhage occurred.
+
+Chest-wall stability was restored with a single sternal titanium plate and two rib plates secured to the residual sternal and rib stumps (Figure 2). Since the tumor did not extensively involve the muscular tissue, the chest incision could be closed directly. The tumor size is about 15*12 cm (Figure 3).
+
+Postoperatively the patient maintained stable thorax without paradoxical respiration. CT with Three-dimensional rib reconstruction confirmed correct plate positioning (Figure 4). Definitive histopathology established a grade II chondrosarcoma with clear resection margins.
+
+One month after surgery, outpatient follow-up CT imaging demonstrated that the titanium plate was in place with no evidence of significant tumor recurrence. The patient was advised to the Department of Radiation Oncology for adjuvant local radiotherapy.

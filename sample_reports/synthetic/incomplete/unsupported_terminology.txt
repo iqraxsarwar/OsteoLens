@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Unsupported terminology
+MODALITY / DOCUMENT TYPE: Imaging report
+
+Synthetic report: a 14 mm intramedullary focus is seen in the fictional ulna. The term 'trabeculoplastic hyperdensity' appears in the source note but is not defined here. No diagnosis or recommendation is supplied.

@@ -1,0 +1,1662 @@
+{
+  "schema_version": "1.0",
+  "dataset": {
+    "name": "Bone Tumor X-ray Radiograph Dataset (BTXRD)",
+    "doi": "10.6084/m9.figshare.27865398.v1",
+    "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+    "archive": "BTXRD.zip (Figshare file ID 50653575)",
+    "archive_size_bytes": 840474929,
+    "archive_md5": "59132a5036d030580ccade8add8f13df",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+    "retrieved_on": "2026-11-15",
+    "selection_note": "60 source image records, 20 per broad class, from the official CC BY 4.0 BTXRD v1 archive. Image records may share patients. Structured metadata is supplied without clinical narratives."
+  },
+  "cases": [
+    {
+      "case_id": "BTXRD-IMG001868",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001868.jpeg",
+      "image_id": "IMG001868.jpeg",
+      "image_path": "/images/btxrd/IMG001868.jpeg",
+      "sha256": "ec1c21791c10dafeb598afb3da1e81ca832c0399f82a04407b4e2b8848aa450b",
+      "anatomical_location": [
+        "Lower Limb"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 15,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG003464",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG003464.jpeg",
+      "image_id": "IMG003464.jpeg",
+      "image_path": "/images/btxrd/IMG003464.jpeg",
+      "sha256": "b149bb4ce66784e0e1d2adbab93b7a9bcf79b60af7219e17d3362076cd79a783",
+      "anatomical_location": [
+        "Upper Limb"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 2,
+        "age_years": 10,
+        "sex": "F",
+        "projection": [
+          "Lateral"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG003735",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG003735.jpg",
+      "image_id": "IMG003735.jpg",
+      "image_path": "/images/btxrd/IMG003735.jpg",
+      "sha256": "b09d30d53e4771b93e229373cf2e1c51cc6dda952d3896ff18649ee4fedee1e4",
+      "anatomical_location": [
+        "Pelvis"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 3,
+        "age_years": 32,
+        "sex": "F",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG002389",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG002389.jpeg",
+      "image_id": "IMG002389.jpeg",
+      "image_path": "/images/btxrd/IMG002389.jpeg",
+      "sha256": "9b2ae268cc94375ea7db40ac3008ab05a81b43782b4fc82769589cdccb1b636c",
+      "anatomical_location": [
+        "Lower Limb"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 19,
+        "sex": "M",
+        "projection": [
+          "Oblique"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG002889",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG002889.jpeg",
+      "image_id": "IMG002889.jpeg",
+      "image_path": "/images/btxrd/IMG002889.jpeg",
+      "sha256": "83ff4d0857bea50a5ad36f4c1e96a5911bacd85e4c3fe5d2deedd5ab55889afd",
+      "anatomical_location": [
+        "Lower Limb"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 49,
+        "sex": "F",
+        "projection": [
+          "Oblique"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG003176",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG003176.jpeg",
+      "image_id": "IMG003176.jpeg",
+      "image_path": "/images/btxrd/IMG003176.jpeg",
+      "sha256": "5b9644b743cf30c22b8419af17d19096898e8129c0c6072fcf55125b1726298e",
+      "anatomical_location": [
+        "Pelvis"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 71,
+        "sex": "F",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG002128",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG002128.jpeg",
+      "image_id": "IMG002128.jpeg",
+      "image_path": "/images/btxrd/IMG002128.jpeg",
+      "sha256": "1fb182d7b3608d31c5541a24cd9739ee8e2366a5935bad3654c4f869ad9f5161",
+      "anatomical_location": [
+        "Lower Limb"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 45,
+        "sex": "F",
+        "projection": [
+          "Lateral"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG002639",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG002639.jpeg",
+      "image_id": "IMG002639.jpeg",
+      "image_path": "/images/btxrd/IMG002639.jpeg",
+      "sha256": "e6b84de63c3eeda79db84d5ac6736a2e99372c347f2acb20cd0056c840f08017",
+      "anatomical_location": [
+        "Lower Limb"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 37,
+        "sex": "F",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG003320",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG003320.jpeg",
+      "image_id": "IMG003320.jpeg",
+      "image_path": "/images/btxrd/IMG003320.jpeg",
+      "sha256": "658c2836abc46fb9e661fd4b8a55ad98a4e76bafe81d0713c22abb9540e746da",
+      "anatomical_location": [
+        "Lower Limb"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 44,
+        "sex": "M",
+        "projection": [
+          "Oblique"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG003032",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG003032.jpeg",
+      "image_id": "IMG003032.jpeg",
+      "image_path": "/images/btxrd/IMG003032.jpeg",
+      "sha256": "edd5cda4c3e108cfe29c03b631fd1af42ffa260dfcfb257eb8da89c5e3a1a76d",
+      "anatomical_location": [
+        "Lower Limb"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 56,
+        "sex": "F",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000222",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000222.jpeg",
+      "image_id": "IMG000222.jpeg",
+      "image_path": "/images/btxrd/IMG000222.jpeg",
+      "sha256": "164070f4bfa738c4da2ece4a94a87a390447a6c2c3bd354b3ac00e736181870f",
+      "anatomical_location": [
+        "Ankle Joint"
+      ],
+      "classification": "Benign",
+      "source_subtype": "synovial osteochondroma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 48,
+        "sex": "M",
+        "projection": [
+          "Lateral"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001348",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001348.jpeg",
+      "image_id": "IMG001348.jpeg",
+      "image_path": "/images/btxrd/IMG001348.jpeg",
+      "sha256": "4ff2bd6153e53b0e480a0e7dc47f3108f50ffea1bd152a2ffad6a95c8d195981",
+      "anatomical_location": [
+        "Tibia",
+        "Fibula",
+        "Femur"
+      ],
+      "classification": "Benign",
+      "source_subtype": "multiple osteochondromas",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 2,
+        "age_years": 10,
+        "sex": "F",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001852",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001852.jpeg",
+      "image_id": "IMG001852.jpeg",
+      "image_path": "/images/btxrd/IMG001852.jpeg",
+      "sha256": "1ad24572c5dd686f7cc4bd19ce13eed4bdb659ae0c2cb01201acb86ae624cf9e",
+      "anatomical_location": [
+        "Humerus"
+      ],
+      "classification": "Benign",
+      "source_subtype": "simple bone cyst",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 3,
+        "age_years": 8,
+        "sex": "F",
+        "projection": [
+          "Oblique"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000724",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000724.jpeg",
+      "image_id": "IMG000724.jpeg",
+      "image_path": "/images/btxrd/IMG000724.jpeg",
+      "sha256": "317e1aa6fce5943985019d01dcf89d6ba2db8941beb7e04bddbdd1388b2686a1",
+      "anatomical_location": [
+        "Foot"
+      ],
+      "classification": "Benign",
+      "source_subtype": "osteochondroma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 23,
+        "sex": "F",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001017",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001017.jpeg",
+      "image_id": "IMG001017.jpeg",
+      "image_path": "/images/btxrd/IMG001017.jpeg",
+      "sha256": "4e3d617391c81bc1c5c033753aa154e0a8b999b6c47c1ccdce6c6c934c29563b",
+      "anatomical_location": [
+        "Radius"
+      ],
+      "classification": "Benign",
+      "source_subtype": "osteochondroma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 57,
+        "sex": "F",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000472",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000472.jpeg",
+      "image_id": "IMG000472.jpeg",
+      "image_path": "/images/btxrd/IMG000472.jpeg",
+      "sha256": "9fd858c6490f6bb1acf52e8c5beeb7f056afb1b95b441c751827466c488869dd",
+      "anatomical_location": [
+        "Humerus",
+        "Shoulder Joint"
+      ],
+      "classification": "Benign",
+      "source_subtype": "multiple osteochondromas",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 16,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001605",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001605.jpeg",
+      "image_id": "IMG001605.jpeg",
+      "image_path": "/images/btxrd/IMG001605.jpeg",
+      "sha256": "00e15a633e23469fcbdb4e29178bba42e57989a32ff4394e9bd4ca76321e24e3",
+      "anatomical_location": [
+        "Ulna",
+        "Radius"
+      ],
+      "classification": "Benign",
+      "source_subtype": "multiple osteochondromas",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 2,
+        "age_years": 6,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001182",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001182.jpeg",
+      "image_id": "IMG001182.jpeg",
+      "image_path": "/images/btxrd/IMG001182.jpeg",
+      "sha256": "e6fe23da86c067889bd74686893bb6c72063b67bed3a253bf04db2ae3b49bb84",
+      "anatomical_location": [
+        "Knee Joint"
+      ],
+      "classification": "Benign",
+      "source_subtype": "synovial osteochondroma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 59,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000877",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000877.jpeg",
+      "image_id": "IMG000877.jpeg",
+      "image_path": "/images/btxrd/IMG000877.jpeg",
+      "sha256": "a2fd8e9f0ee82e79e500ebfd7965caf0ee2f9f35d19d003fbf4c7258d44edeb7",
+      "anatomical_location": [
+        "Hand"
+      ],
+      "classification": "Benign",
+      "source_subtype": "osteochondroma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 57,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001735",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001735.jpeg",
+      "image_id": "IMG001735.jpeg",
+      "image_path": "/images/btxrd/IMG001735.jpeg",
+      "sha256": "988ca8ff92caa6227650cbe9384f24bb862ecd6e5b14f63827ae6fc2fbf893b1",
+      "anatomical_location": [
+        "Hip Bone"
+      ],
+      "classification": "Benign",
+      "source_subtype": "osteochondroma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 3,
+        "age_years": 22,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000001",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000001.jpeg",
+      "image_id": "IMG000001.jpeg",
+      "image_path": "/images/btxrd/IMG000001.jpeg",
+      "sha256": "2ddae86a96c6c696ec5c30f43102ce63c9d29873bcdf1ec613371efb5dd837ad",
+      "anatomical_location": [
+        "Hip Bone"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "other mt",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 48,
+        "sex": "F",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001350",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001350.jpeg",
+      "image_id": "IMG001350.jpeg",
+      "image_path": "/images/btxrd/IMG001350.jpeg",
+      "sha256": "cadf3c041592cd68e560b8ab2ab2a384077e27b146d29cdad9c3852607c9d2f7",
+      "anatomical_location": [
+        "Femur"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "osteosarcoma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 2,
+        "age_years": 10,
+        "sex": "F",
+        "projection": [
+          "Lateral"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001747",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001747.jpeg",
+      "image_id": "IMG001747.jpeg",
+      "image_path": "/images/btxrd/IMG001747.jpeg",
+      "sha256": "4f47b12e0228996ccfa4aab6712a798ce3fd67300a5b3604220db28877b7225c",
+      "anatomical_location": [
+        "Humerus"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "other mt",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 3,
+        "age_years": 23,
+        "sex": "M",
+        "projection": [
+          "Oblique"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000607",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000607.jpeg",
+      "image_id": "IMG000607.jpeg",
+      "image_path": "/images/btxrd/IMG000607.jpeg",
+      "sha256": "ecaa857e5eaa89cdd834e4a57f4201f52224b1ebf0d587df5c95956da720181b",
+      "anatomical_location": [
+        "Tibia"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "other mt",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 27,
+        "sex": "F",
+        "projection": [
+          "Lateral"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000880",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000880.jpeg",
+      "image_id": "IMG000880.jpeg",
+      "image_path": "/images/btxrd/IMG000880.jpeg",
+      "sha256": "131ca045d6e3027f12e7a7a9a67a292059076bbc467e8bb9e5d130a90e98f7aa",
+      "anatomical_location": [
+        "Foot"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "other mt",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 44,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000221",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000221.jpeg",
+      "image_id": "IMG000221.jpeg",
+      "image_path": "/images/btxrd/IMG000221.jpeg",
+      "sha256": "a2cc44a2384c7fad72106c1c821f519223facad13f09237ee8c7d0f35416c086",
+      "anatomical_location": [
+        "Fibula"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "other mt",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 55,
+        "sex": "M",
+        "projection": [
+          "Lateral"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001578",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001578.jpeg",
+      "image_id": "IMG001578.jpeg",
+      "image_path": "/images/btxrd/IMG001578.jpeg",
+      "sha256": "d59aee15ff69aa69c4a3171cd15e1dbdcd48dd965761ce1fa4f7df050c62c563",
+      "anatomical_location": [
+        "Ulna"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "osteosarcoma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 2,
+        "age_years": 40,
+        "sex": "M",
+        "projection": [
+          "Lateral"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000133",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000133.jpeg",
+      "image_id": "IMG000133.jpeg",
+      "image_path": "/images/btxrd/IMG000133.jpeg",
+      "sha256": "a9678226a9f3340708b4f07d349e3c2ffc730e9d808481740e24dac6d3bcd76f",
+      "anatomical_location": [
+        "Shoulder Joint"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "osteosarcoma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 66,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000173",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000173.jpeg",
+      "image_id": "IMG000173.jpeg",
+      "image_path": "/images/btxrd/IMG000173.jpeg",
+      "sha256": "727773de02a28222c658ff0a347a5ede38b032a394d7400bb3933ad377405446",
+      "anatomical_location": [
+        "Radius"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "osteosarcoma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 70,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001767",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001767.jpeg",
+      "image_id": "IMG001767.jpeg",
+      "image_path": "/images/btxrd/IMG001767.jpeg",
+      "sha256": "83ce53d89b2810ae80adeb4b234fe5c15615b5380c25881438fe349ac1d2c07d",
+      "anatomical_location": [
+        "Hand"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "other mt",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 3,
+        "age_years": 25,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001869",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001869.jpeg",
+      "image_id": "IMG001869.jpeg",
+      "image_path": "/images/btxrd/IMG001869.jpeg",
+      "sha256": "837e3ac50ac51575528df7c9ff132bbb9403620e4be136381b85b8d1ed60f517",
+      "anatomical_location": [
+        "Lower Limb"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 15.0,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001870",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001870.jpeg",
+      "image_id": "IMG001870.jpeg",
+      "image_path": "/images/btxrd/IMG001870.jpeg",
+      "sha256": "1b9670f0aeef051abed5ab956cecff50571a089035ce5fa72ab4cc36e54dbb7e",
+      "anatomical_location": [
+        "Lower Limb"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 15.0,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001871",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001871.jpeg",
+      "image_id": "IMG001871.jpeg",
+      "image_path": "/images/btxrd/IMG001871.jpeg",
+      "sha256": "48db6811bdbbcb87c512a213754fc923c223239122b8ddd74e0135bc11a039d7",
+      "anatomical_location": [
+        "Lower Limb"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 15.0,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001872",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001872.jpeg",
+      "image_id": "IMG001872.jpeg",
+      "image_path": "/images/btxrd/IMG001872.jpeg",
+      "sha256": "78280265f509577cd361a131f28929fd9efed0ff76e091ed5ddd2f8b459558a5",
+      "anatomical_location": [
+        "Lower Limb"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 73.0,
+        "sex": "F",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001873",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001873.jpeg",
+      "image_id": "IMG001873.jpeg",
+      "image_path": "/images/btxrd/IMG001873.jpeg",
+      "sha256": "dcc14a6a38b2de3bd70ad3254d6f7c50a5343589bbe361b396761ba082709bfd",
+      "anatomical_location": [
+        "Lower Limb"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 45.0,
+        "sex": "F",
+        "projection": [
+          "Lateral"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001874",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001874.jpeg",
+      "image_id": "IMG001874.jpeg",
+      "image_path": "/images/btxrd/IMG001874.jpeg",
+      "sha256": "3c52c4b7eed0afbdc589e0920dfaee338a0fb72a4d809ab92e4cdf1bd37b3e87",
+      "anatomical_location": [
+        "Lower Limb"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 39.0,
+        "sex": "F",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001875",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001875.jpeg",
+      "image_id": "IMG001875.jpeg",
+      "image_path": "/images/btxrd/IMG001875.jpeg",
+      "sha256": "99f5ea3c59b3412205dc05a6417bdf6985682d9e1142c819ed29e44b6a8b71ef",
+      "anatomical_location": [
+        "Lower Limb"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 39.0,
+        "sex": "F",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001876",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001876.jpeg",
+      "image_id": "IMG001876.jpeg",
+      "image_path": "/images/btxrd/IMG001876.jpeg",
+      "sha256": "5ef8e92d3218c97c1c577df1191fb82ad9f6528a0fc87bd1f764c5d2ddf5dc83",
+      "anatomical_location": [
+        "Lower Limb"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 39.0,
+        "sex": "F",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001877",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001877.jpeg",
+      "image_id": "IMG001877.jpeg",
+      "image_path": "/images/btxrd/IMG001877.jpeg",
+      "sha256": "c9ff51fc2370d771587bc10b0977607d5116a8d50357ccd0aad4a1f58051ed46",
+      "anatomical_location": [
+        "Lower Limb"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 39.0,
+        "sex": "F",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG001878",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG001878.jpeg",
+      "image_id": "IMG001878.jpeg",
+      "image_path": "/images/btxrd/IMG001878.jpeg",
+      "sha256": "91c87aa735d6e1097691a7757b95537ecbe77d9df6fa468b00d5cb5a4db22f38",
+      "anatomical_location": [
+        "Lower Limb"
+      ],
+      "classification": "Normal",
+      "source_subtype": null,
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 15.0,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000234",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000234.jpeg",
+      "image_id": "IMG000234.jpeg",
+      "image_path": "/images/btxrd/IMG000234.jpeg",
+      "sha256": "a2590d7b0fcb40a97ae56ec880e37e35b3f997b9590a90e56173f37b49efaa32",
+      "anatomical_location": [
+        "Radius",
+        "Upper Limb"
+      ],
+      "classification": "Benign",
+      "source_subtype": "giant cell tumor",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 65.0,
+        "sex": "F",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000235",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000235.jpeg",
+      "image_id": "IMG000235.jpeg",
+      "image_path": "/images/btxrd/IMG000235.jpeg",
+      "sha256": "f2950ba8d7b056c4c3795b495303a2476797c53f342f2cf2287f036f484faf7c",
+      "anatomical_location": [
+        "Radius",
+        "Upper Limb"
+      ],
+      "classification": "Benign",
+      "source_subtype": "giant cell tumor",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 65.0,
+        "sex": "F",
+        "projection": [
+          "Lateral"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000236",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000236.jpeg",
+      "image_id": "IMG000236.jpeg",
+      "image_path": "/images/btxrd/IMG000236.jpeg",
+      "sha256": "f7cad55593d8e1224a0a416511fd905e6cbedee7004030c5cda4de7b5c9cfb01",
+      "anatomical_location": [
+        "Foot",
+        "Lower Limb"
+      ],
+      "classification": "Benign",
+      "source_subtype": "simple bone cyst",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 71.0,
+        "sex": "F",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000237",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000237.jpeg",
+      "image_id": "IMG000237.jpeg",
+      "image_path": "/images/btxrd/IMG000237.jpeg",
+      "sha256": "f6741c10ca4d4887961f600f5edc4aec2e1e5919e038d716ffdf0496aafc4494",
+      "anatomical_location": [
+        "Foot",
+        "Lower Limb"
+      ],
+      "classification": "Benign",
+      "source_subtype": "simple bone cyst",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 71.0,
+        "sex": "F",
+        "projection": [
+          "Oblique"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000238",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000238.jpeg",
+      "image_id": "IMG000238.jpeg",
+      "image_path": "/images/btxrd/IMG000238.jpeg",
+      "sha256": "603a1664f4e05dc49712458e3ef4d12412232d4c82d3079b74400b0d081ef435",
+      "anatomical_location": [
+        "Tibia",
+        "Lower Limb"
+      ],
+      "classification": "Benign",
+      "source_subtype": "other bt",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 26.0,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000239",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000239.jpeg",
+      "image_id": "IMG000239.jpeg",
+      "image_path": "/images/btxrd/IMG000239.jpeg",
+      "sha256": "2c0642c64b0a8a0de74c16850a229641529012d596cbe614708d0ed96daaa5df",
+      "anatomical_location": [
+        "Tibia",
+        "Lower Limb"
+      ],
+      "classification": "Benign",
+      "source_subtype": "other bt",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 26.0,
+        "sex": "M",
+        "projection": [
+          "Lateral"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000240",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000240.jpeg",
+      "image_id": "IMG000240.jpeg",
+      "image_path": "/images/btxrd/IMG000240.jpeg",
+      "sha256": "91cc87a8bb4f84f4c224d3d6a111ecff8df848c98b55814c7c1cdea20cb72cf2",
+      "anatomical_location": [
+        "Humerus",
+        "Upper Limb"
+      ],
+      "classification": "Benign",
+      "source_subtype": "osteochondroma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 8.0,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000241",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000241.jpeg",
+      "image_id": "IMG000241.jpeg",
+      "image_path": "/images/btxrd/IMG000241.jpeg",
+      "sha256": "a40de091157442e236b19bbbacab61d9a29cf4ea95925b2aba16b654e729266d",
+      "anatomical_location": [
+        "Humerus",
+        "Upper Limb"
+      ],
+      "classification": "Benign",
+      "source_subtype": "osteochondroma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 8.0,
+        "sex": "M",
+        "projection": [
+          "Lateral"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000242",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000242.jpeg",
+      "image_id": "IMG000242.jpeg",
+      "image_path": "/images/btxrd/IMG000242.jpeg",
+      "sha256": "a8f8a4db18dcb22e07cb9b6103d291604b592b9aca39b624d7fefeda65186105",
+      "anatomical_location": [
+        "Tibia",
+        "Lower Limb"
+      ],
+      "classification": "Benign",
+      "source_subtype": "giant cell tumor",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 81.0,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000243",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000243.jpeg",
+      "image_id": "IMG000243.jpeg",
+      "image_path": "/images/btxrd/IMG000243.jpeg",
+      "sha256": "9b8913719306eab5f3094b796726b0fdfee28d1cdbffabea695e6338dce4affa",
+      "anatomical_location": [
+        "Tibia",
+        "Lower Limb"
+      ],
+      "classification": "Benign",
+      "source_subtype": "giant cell tumor",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 81.0,
+        "sex": "M",
+        "projection": [
+          "Lateral"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000002",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000002.jpeg",
+      "image_id": "IMG000002.jpeg",
+      "image_path": "/images/btxrd/IMG000002.jpeg",
+      "sha256": "f7b58cd92eae19e5263ec114b96b5bbc2a4152da4c5e96823c3dcbb5d4213bbf",
+      "anatomical_location": [
+        "Tibia",
+        "Lower Limb"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "osteosarcoma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 12.0,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000003",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000003.jpeg",
+      "image_id": "IMG000003.jpeg",
+      "image_path": "/images/btxrd/IMG000003.jpeg",
+      "sha256": "11bde800f29c60639c542bbf7e767c4f2786d6b60dfa1a023562934f2e861b43",
+      "anatomical_location": [
+        "Tibia",
+        "Lower Limb"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "osteosarcoma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 12.0,
+        "sex": "M",
+        "projection": [
+          "Lateral"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000004",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000004.jpeg",
+      "image_id": "IMG000004.jpeg",
+      "image_path": "/images/btxrd/IMG000004.jpeg",
+      "sha256": "5526b61030169b3d8a0f0474721a71ac95456c56b50c088f5ad29ffec2dcec18",
+      "anatomical_location": [
+        "Foot",
+        "Lower Limb"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "osteosarcoma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 52.0,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000005",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000005.jpeg",
+      "image_id": "IMG000005.jpeg",
+      "image_path": "/images/btxrd/IMG000005.jpeg",
+      "sha256": "6bbca0ca2b10b1676272aea91be111f8b4f1a06ffed6ce05921bca0ecfd46f6d",
+      "anatomical_location": [
+        "Foot",
+        "Lower Limb"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "osteosarcoma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 52.0,
+        "sex": "M",
+        "projection": [
+          "Oblique"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000006",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000006.jpeg",
+      "image_id": "IMG000006.jpeg",
+      "image_path": "/images/btxrd/IMG000006.jpeg",
+      "sha256": "52a66c90e47cfd5248797d6122d5841266813bf6a945f42a97670fb5a5d14e49",
+      "anatomical_location": [
+        "Femur",
+        "Lower Limb"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "osteosarcoma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 62.0,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000007",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000007.jpeg",
+      "image_id": "IMG000007.jpeg",
+      "image_path": "/images/btxrd/IMG000007.jpeg",
+      "sha256": "e416de59f060c05723d82a501321bf776f210db65dcb921d28c4a8a4db60514b",
+      "anatomical_location": [
+        "Femur",
+        "Lower Limb"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "osteosarcoma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 62.0,
+        "sex": "M",
+        "projection": [
+          "Lateral"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000008",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000008.jpeg",
+      "image_id": "IMG000008.jpeg",
+      "image_path": "/images/btxrd/IMG000008.jpeg",
+      "sha256": "1773bf629d30b3ff29ab53e8c339a7b54ee191929791af48f95f38982d868ba6",
+      "anatomical_location": [
+        "Humerus",
+        "Upper Limb"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "osteosarcoma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 6.0,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000009",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000009.jpeg",
+      "image_id": "IMG000009.jpeg",
+      "image_path": "/images/btxrd/IMG000009.jpeg",
+      "sha256": "c1058372ad119109343ed5e7b689a8c115702a24fa11e64d3275755d7df3fc29",
+      "anatomical_location": [
+        "Humerus",
+        "Upper Limb"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "osteosarcoma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 6.0,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000010",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000010.jpeg",
+      "image_id": "IMG000010.jpeg",
+      "image_path": "/images/btxrd/IMG000010.jpeg",
+      "sha256": "7930d99578f866378bc4573183ced83b9a7e688a29cddbd9270e2d1d7b7b5ddc",
+      "anatomical_location": [
+        "Humerus",
+        "Upper Limb"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "osteosarcoma",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 16.0,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    },
+    {
+      "case_id": "BTXRD-IMG000011",
+      "dataset_source": "BTXRD — Bone Tumor X-ray Radiograph Dataset",
+      "source_url": "https://doi.org/10.6084/m9.figshare.27865398.v1",
+      "source_citation": "Yao S, Huang Y, Wang X, et al. A Radiograph Dataset for the Classification, Localization, and Segmentation of Primary Bone Tumors. Scientific Data. 2025;12:88. https://doi.org/10.1038/s41597-024-04311-y",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_archive_path": "BTXRD/images/IMG000011.jpeg",
+      "image_id": "IMG000011.jpeg",
+      "image_path": "/images/btxrd/IMG000011.jpeg",
+      "sha256": "1abfa6aad002e6a0651f3ab6a3e8dc127f477e04c720b0a49b57305c2eed394f",
+      "anatomical_location": [
+        "Hip Bone",
+        "Pelvis"
+      ],
+      "classification": "Malignant",
+      "source_subtype": "other mt",
+      "clinical_description": null,
+      "clinical_description_status": "Not provided in the BTXRD metadata.",
+      "metadata": {
+        "collection_center": 1,
+        "age_years": 45.0,
+        "sex": "M",
+        "projection": [
+          "Frontal"
+        ]
+      }
+    }
+  ]
+}

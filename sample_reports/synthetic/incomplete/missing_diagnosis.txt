@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Report without diagnosis
+MODALITY / DOCUMENT TYPE: Bone radiograph
+
+Synthetic report: there is a 2.1 cm lucent focus in the left calcaneus. Margins are incompletely described. No fracture is mentioned. Impression: [not provided]. Recommendation: [not provided].

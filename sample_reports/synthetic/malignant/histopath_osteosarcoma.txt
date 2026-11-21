@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Osteosarcoma histopathology
+MODALITY / DOCUMENT TYPE: Histopathology report
+
+Synthetic core biopsy material contains atypical spindle cells associated with malignant osteoid in the sampled tissue. The fictional pathology impression is osteosarcoma. This sample report gives no patient identifiers, stage, margins, or treatment plan.

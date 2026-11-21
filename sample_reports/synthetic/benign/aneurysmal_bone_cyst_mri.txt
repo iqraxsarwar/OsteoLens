@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Aneurysmal bone cyst MRI
+MODALITY / DOCUMENT TYPE: MRI report
+
+MRI demonstrates a synthetic expansile multiloculated lesion in the posterior elements of a fictional long bone. Multiple fluid-fluid levels are present. These findings are nonspecific and can occur in an aneurysmal bone cyst. The report does not establish a final diagnosis; specialist review is recommended.

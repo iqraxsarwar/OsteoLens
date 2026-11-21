@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Pathologic fracture report
+MODALITY / DOCUMENT TYPE: CT report
+
+CT describes a synthetic fracture through a pre-existing lytic lesion in the proximal humeral shaft. The lesion has cortical thinning and a small extraosseous component. The report raises concern for an underlying neoplasm but does not state a tumour type. Tissue diagnosis is unavailable.

@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Osteochondroma MRI
+MODALITY / DOCUMENT TYPE: MRI report
+
+MRI of the synthetic proximal humerus demonstrates a pedunculated metaphyseal lesion with corticomedullary continuity. The cartilage cap is measured at 8 mm in this fictional example. No adjacent soft-tissue mass is identified. Impression: osteochondroma; correlate with symptoms and prior imaging.

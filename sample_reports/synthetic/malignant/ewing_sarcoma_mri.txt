@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Ewing sarcoma MRI
+MODALITY / DOCUMENT TYPE: MRI report
+
+A synthetic diaphyseal lesion in the tibia has low T1 and heterogeneous high fluid-sensitive signal with an adjacent soft-tissue component. The imaging appearance is aggressive but nonspecific. Ewing sarcoma is mentioned in the differential. Biopsy and clinical staging are not supplied.

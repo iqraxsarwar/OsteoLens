@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Post-treatment follow-up
+MODALITY / DOCUMENT TYPE: Oncology follow-up
+
+The synthetic follow-up MRI describes decreased size of the previously measured extraosseous component after fictional neoadjuvant treatment. Marrow signal remains abnormal. No comparison measurements are provided here. This text does not establish treatment response category or recommend a change in care.

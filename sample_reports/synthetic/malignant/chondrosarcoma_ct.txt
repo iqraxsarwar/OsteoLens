@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Chondrosarcoma CT
+MODALITY / DOCUMENT TYPE: CT report
+
+CT shows a synthetic central chondroid matrix lesion in the pelvis with ring-and-arc mineralisation and focal endosteal scalloping. No extraosseous mass is described. The report states that imaging alone cannot determine grade; correlation with MRI and tissue sampling is suggested.

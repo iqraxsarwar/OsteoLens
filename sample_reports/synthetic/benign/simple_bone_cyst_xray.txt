@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Simple bone cyst radiograph
+MODALITY / DOCUMENT TYPE: Bone radiograph
+
+The synthetic proximal humerus contains a central, geographic lucency with a narrow zone of transition and mild cortical thinning. No aggressive periosteal reaction is described. Impression: a simple bone cyst is in the differential. No fracture is identified.

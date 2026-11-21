@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Giant cell tumour MRI
+MODALITY / DOCUMENT TYPE: MRI report
+
+A synthetic eccentric, expansile lytic lesion extends to the subarticular region of the distal radius. The cortex is thinned but appears intact. No definite extraosseous component is identified. The imaging differential includes giant cell tumour of bone. Tissue diagnosis is not provided in this report.

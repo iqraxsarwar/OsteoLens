@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Giant cell tumour CT
+MODALITY / DOCUMENT TYPE: CT report
+
+CT of the synthetic distal femur shows a well-defined expansile lytic lesion with a narrow transition zone and no mineralised matrix. There is cortical thinning without a displaced fracture. Imaging appearance may be seen with a giant cell tumour, among other entities. Histology is not available.

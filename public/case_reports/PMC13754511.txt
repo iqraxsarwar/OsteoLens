@@ -1,0 +1,25 @@
+Published case report excerpt
+Diagnosing a Fractured Pedunculated Osteochondroma Using Point-of-Care Ultrasound in the Emergency Department: A Case Report
+Wilson Jared, Tremwel Martin, Query Madeline
+https://pmc.ncbi.nlm.nih.gov/articles/PMC13754511/
+CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Case sections extracted from the published article.
+
+CASE REPORT
+An 8-year-old boy presented to our emergency department (ED) for acute on chronic right knee pain. He initially reported two months of right knee pain with acute worsened symptoms the night before after bumping his medial knee with his elbow. He now reported a palpable bump. He was initially evaluated by his primary care clinician several months earlier and was diagnosed with growing pains.
+
+The patient had no significant past medical or social history. His only allergy was to cephalexin. On physical exam, he was noted to have a palpable swollen/firm area on the right distal medial femur without evidence of overlying erythema, fluctuance or induration. This area was significantly tender to palpation. He maintained full range of motion of the knee.
+
+Initial diagnostic imaging in this case was POCUS (Image 1). This demonstrated a hyperechoic density visualized on the right distal medial femur with likely step-off or defect consistent with fracture. Given the concern for cortical irregularity and possible bone lesion, further imaging was obtained, which included radiographs of the right knee in four views as well as a consultative ultrasound performed in the radiology suite.
+
+Radiographs demonstrated a circumscribed exophytic bone lesion arising from the medial aspect of the distal femur measuring approximately 20 × 10 mm (Image 2). This was contiguous with adjacent cortex and trabeculae and characteristic for an osteochondroma. Seen best on the anteroposterior view, there appeared to be a fracture through the base of the osteochondroma with approximately 1 mm cortical step-off inferiorly. Consultative ultrasound demonstrated an exophytic osseous lesion arising from the distal medial femur, consistent with an osteochondroma (Image 3).
+
+With the above findings of osteochondroma with fracture as seen on both plain radiographs and ultrasound, the pediatric orthopedics team recommended outpatient follow-up for further discussion of management. He was discharged from the ED in stable condition, able to bear weight as tolerated. He was seen in an orthopedic clinic two days later where they discussed management options including surgical excision. The patient and his mother elected to undergo surgical excision and underwent successful surgical removal of the osteochondroma two months later.
+
+Osteochondromas are common benign bone tumors in children; fracture is a recognized complication that can cause acute pain.
+
+This case demonstrates a novel use of point-of-care ultrasound (POCUS) to diagnose a fractured distal femoral osteochondroma after minor trauma in a child.
+
+POCUS can identify cortical irregularity and fracture of an osteochondroma and may complement radiographs in the emergency department.
+
+POCUS may help emergency physicians rapidly identify bony lesions and suspected fracture, guiding radiography and specialty follow-up.

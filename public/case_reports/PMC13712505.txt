@@ -1,0 +1,19 @@
+Published case report excerpt
+Surgical treatment of thoracic vertebral chondrosarcoma with total en bloc spondylectomy: a case report
+Sakti Yudha M, Lanodiyu Zikrina A, Prasetyo Thomas E, Nurfadhilah Muhammad I, Sari Dyah A P, Ridha Muchtar, Santiko Wiwid, Darutama Abirafdi A, Anggunio Vylomonicca, Pratama Ilham A, Aji Andika S, Calisto Kadek E, Adamina Zahra N, Rukmoyo Tedjo
+https://pmc.ncbi.nlm.nih.gov/articles/PMC13712505/
+CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Case sections extracted from the published article.
+
+Case report
+A 60-year-old male patient with a history of working as a truck driver and laborer, presented with progressive numbness of both lower extremities. Symptoms began 2.5 years earlier as sudden-onset numbness in the left leg, gradually progressing to involve the right leg. Initial conservative treatment at a regional hospital was unsuccessful. Two years before the current admission, he underwent posterior decompression consisting of laminectomy, debridement, spinal stabilization, open biopsy, and tissue culture at our institution. Following surgery, he received six cycles of doxorubicin and cisplatin chemotherapy and 33 fractions of adjuvant radiotherapy because of residual tumor. Follow-up magnetic resonance imaging (MRI) demonstrated local recurrence, and the patient was referred back to the Orthopaedic and Traumatology Department for definitive surgical management.
+
+On admission, the patient was fully conscious, ambulatory, and hemodynamically stable. Physical examination revealed no spinal deformity or tenderness. Motor strength was preserved (grade 5/5) in all extremities, whereas sensory examination demonstrated hypoesthesia below the T5 dermatome. Bowel and bladder function were intact, and neurological status was classified as American Spinal Injury Association Impairment Scale grade D.
+
+Laboratory investigations were within normal limits. Plain radiographs demonstrated previous posterior instrumentation with a 36.5° thoracic scoliosis. Thoracic MRI revealed recurrent tumor involving the T4–T6 vertebrae. The diagnosis of recurrent thoracic chondrosarcoma was made based on clinical, radiological, and previous histopathological findings (Fig. 1). A multidisciplinary team planned revision surgery consisting of implant removal, wide tumor excision, TES, and instrumented spinal reconstruction.
+
+Through a posterior midline approach, the previous implants were removed and the tumor margins were identified. A well-circumscribed solid mass involving T4–T6 was excised en bloc, including partial spondylectomy of T3 and total spondylectomy of T4, followed by anterior cage reconstruction and posterior instrumentation with cross-links (Figs 2 and 3).
+
+Histopathological examination demonstrated a highly cellular conventional chondroid neoplasm with lobulated architecture infiltrating adjacent bone and soft tissue (Fig. 4). Tumor cells showed moderate to marked nuclear pleomorphism, occasional binucleated chondrocytes within lacunae, abundant basophilic chondroid matrix with focal myxoid change and identifiable mitotic figures. These findings confirmed recurrent grade II conventional chondrosarcoma.
+
+The postoperative course was uneventful without major neurological or wound complications. The neurological examination on follow-up demonstrated intact motor strength (5/5) in all extremities with continued hypoesthesia below the T5 dermatome. Deep tendon reflexes were normal, pathological reflexes were absent, and bowel and bladder function remained intact. At 3 months postoperatively, contrast-enhanced computed tomography (CT) of the thoracic spine demonstrated satisfactory postoperative spinal reconstruction with no evidence of residual or recurrent tumor, as shown in (Fig. 5). The patient remained neurologically stable, with preserved motor function and no new neurological deficits.

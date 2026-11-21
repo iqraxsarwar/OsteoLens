@@ -1,0 +1,278 @@
+OsteoLens – Complete Feature Requirements
+Project purpose: OsteoLens is an AI-powered bone imaging research platform that analyses bone X-rays, highlights potentially suspicious regions, provides explanations of medical cases and reports, and answers medical knowledge questions using a source-based RAG assistant.
+
+It should function as one connected web application, not as a collection of separate demo screens.
+1. Case library and sample dataset
+Core requirement
+The application needs a proper collection of bone X-ray cases. Having only six cases is not sufficient for the case library we discussed.
+- [ ] Include at least 30 properly organised sample cases for the initial working version.
+- [ ] Aim for more cases where the dataset and licensing allow it.
+- [ ] Use publicly available bone X-ray datasets, particularly BTXRD as the primary image dataset.
+- [ ] Explore MedPix for additional teaching cases with associated clinical descriptions.
+- [ ] Include normal, benign and malignant examples where supported by the available dataset.
+- [ ] Every case should have a unique Case ID.
+- [ ] Every case should display its original source.
+- [ ] Every case should include an actual X-ray image, not a repeated placeholder.
+- [ ] Include anatomical location, available diagnosis/classification, and clinical description where provided by the source.
+- [ ] Include relevant metadata, such as image type and dataset name, where available.
+- [ ] Make cases searchable and filterable by category, diagnosis, anatomical location and source.
+- [ ] Make sure the cases are genuinely different and not simply duplicated images with different names.
+- [ ] Do not invent clinical descriptions or diagnoses to make the library look complete.
+Important: The 30-case requirement is a minimum for the demonstration library, not a claim that the model has been trained on only 30 images. The training dataset and the sample cases displayed in the application are two different things.
+2. X-ray image viewer
+Core requirement
+The X-ray viewer is one of the most important parts of OsteoLens. It must actually display and respond to the selected case.
+- [ ] Display the correct, original X-ray for every selected case.
+- [ ] Changing the selected case must load a different image.
+- [ ] Images must not remain the same when switching between cases.
+- [ ] Images must load at a clear, usable resolution.
+- [ ] Preserve the image's aspect ratio and avoid stretching or cropping important anatomy.
+- [ ] Provide zoom-in and zoom-out functionality.
+- [ ] Allow users to pan around enlarged images.
+- [ ] Provide a reset-view option.
+- [ ] Allow users to switch between the original X-ray and the AI-generated visualisation.
+- [ ] Display the Case ID and source alongside the image.
+- [ ] Handle missing or unsupported images properly instead of displaying a blank area.
+The viewer must be connected to the actual case data. It should not display one static X-ray for every case.
+3. AI bone X-ray analysis
+Core requirement
+This is the central AI feature of the project. The system must analyse the selected X-ray using an actual trained image-analysis model.
+- [ ] Accept or retrieve a bone X-ray image.
+- [ ] Preprocess the image appropriately before model inference.
+- [ ] Run the image through a trained deep learning model.
+- [ ] Classify the image into the categories supported by the training dataset, such as:
+  - Normal
+  - Benign tumour
+  - Malignant tumour
+- [ ] Display the model's predicted class.
+- [ ] Display a confidence score or probability distribution.
+- [ ] Display the probability for each supported class rather than only showing one result.
+- [ ] Provide an appropriate uncertainty or low-confidence warning.
+- [ ] Make sure the prediction changes when a different image is analysed.
+- [ ] Display an informative message if the image is unsupported or unsuitable for analysis.
+- [ ] Clearly distinguish actual model predictions from example or demonstration results.
+Important: The application must not simply display pre-written predictions. Results must come from the model analysing the selected image.
+4. Suspicious region detection and localisation
+Core requirement, subject to dataset support
+The system should do more than classify an X-ray. It should help users understand where a potentially suspicious region is located.
+- [ ] Identify potentially suspicious regions in the X-ray using an appropriate localisation model.
+- [ ] Display bounding boxes around detected regions where supported.
+- [ ] Display segmentation masks where suitable annotations and model development allow it.
+- [ ] Overlay the detected region on the original X-ray.
+- [ ] Allow users to compare the original image with the highlighted version.
+- [ ] Display localisation results separately from the overall classification.
+- [ ] Show an appropriate message if no region is detected.
+- [ ] Avoid displaying artificial boxes or highlights that are not generated by the model.
+The system should not claim to have located a tumour simply because the classification model predicts a malignant pattern.
+5. Explainable AI (Grad-CAM)
+Core requirement
+Users should be able to understand which parts of the X-ray influenced the model's prediction.
+- [ ] Implement Grad-CAM or a suitable explainability method.
+- [ ] Generate a heatmap based on the selected X-ray and its model prediction.
+- [ ] Overlay the heatmap on the original X-ray.
+- [ ] Allow users to view the original image and heatmap separately.
+- [ ] Ensure the heatmap changes when a different X-ray is analysed.
+- [ ] Explain in simple language what the heatmap represents.
+- [ ] Clearly state that a heatmap shows model attention or influence, not confirmed tumour boundaries.
+6. Medical case library and case selection
+The case library should connect all the relevant information belonging to one case.
+- [ ] Allow users to select a case from the library.
+- [ ] Automatically load the corresponding X-ray.
+- [ ] Load the associated clinical description, report or teaching-case information, if available.
+- [ ] Display the case's source and reference link.
+- [ ] Display the source-provided diagnosis separately from the AI prediction.
+- [ ] Keep the X-ray, clinical description and case information linked through the same Case ID.
+- [ ] Do not allow unrelated reports to be paired with an X-ray.
+- [ ] Clearly indicate when a case does not have an associated report.
+- [ ] Allow users to explore cases without having to upload their own medical images.
+The user should select one case, not independently select an X-ray and an unrelated report.
+7. Medical report analyser
+Core requirement
+The report analyser should help users understand medical reports and clinical descriptions related to bone conditions.
+- [ ] Allow users to upload a supported medical report (PDF or text) where permitted.
+- [ ] Extract text from PDF documents.
+- [ ] Include OCR support for scanned documents if feasible.
+- [ ] Identify important medical terminology.
+- [ ] Explain medical terminology in simple, understandable language.
+- [ ] Extract relevant information such as:
+  - Anatomical location.
+  - Reported imaging findings.
+  - Mentioned tumour type or diagnosis.
+  - Recommendations or follow-up instructions, if stated.
+- [ ] Generate a clear summary of the report.
+- [ ] Separate the original report findings from AI-generated explanations.
+- [ ] Highlight important terms and findings.
+- [ ] Allow users to ask questions about the uploaded report.
+- [ ] Ensure answers are based on the actual report content.
+- [ ] Display a useful error if a document cannot be read.
+- [ ] Avoid inventing findings that are not present in the report.
+Expected result: A user uploads or selects a report and receives a structured explanation of what it says, rather than a chatbot that simply gives generic medical information.
+8. RAG medical AI assistant
+Core requirement
+The RAG chatbot should be able to answer a reasonable range of questions about bone tumours and related medical information. It should not only respond to a few specific pre-programmed questions.
+- [ ] Build a proper Retrieval-Augmented Generation (RAG) pipeline.
+- [ ] Collect reliable medical information from trusted sources.
+- [ ] Use relevant peer-reviewed research papers and medical publications.
+- [ ] Include reliable information about bone tumours, including:
+  - Types of bone tumours.
+  - Benign versus malignant tumours.
+  - Common characteristics.
+  - Symptoms and clinical presentation.
+  - Diagnostic methods.
+  - Imaging characteristics.
+  - Treatment approaches.
+  - Medical terminology.
+- [ ] Extract and clean information from source documents.
+- [ ] Divide documents into meaningful chunks.
+- [ ] Generate embeddings.
+- [ ] Store embeddings in a vector database.
+- [ ] Retrieve relevant information based on the user's question.
+- [ ] Generate answers using retrieved information.
+- [ ] Include citations and references to the sources used.
+- [ ] Provide source links where available.
+- [ ] Support follow-up questions and conversational context.
+- [ ] Handle differently worded questions about the same topic.
+- [ ] Answer broader educational questions, not only questions matching a specific keyword.
+- [ ] Say when sufficient information cannot be found instead of making up an answer.
+- [ ] Clearly distinguish general medical knowledge from information about a selected case.
+- [ ] Avoid presenting generated information as a confirmed diagnosis.
+Example questions the chatbot should be able to handle:
+- What is the difference between benign and malignant bone tumours?
+- What are the common types of primary bone cancer?
+- What characteristics might appear on an X-ray of an osteosarcoma?
+- What does cortical destruction mean?
+- What is the difference between osteosarcoma and Ewing sarcoma?
+- What additional tests might doctors use after identifying a suspicious bone lesion?
+- Can you explain this medical report in simpler language?
+- What does the research say about AI in bone tumour detection?
+The chatbot should retrieve relevant information and formulate answers, not rely on a small collection of fixed responses.
+9. Selected-case AI integration
+Core requirement
+The different AI features must work together when a user selects a case.
+- [ ] Selecting a case should automatically load its X-ray and associated information.
+- [ ] The X-ray should be analysed by the image model.
+- [ ] The classification result should be displayed.
+- [ ] The localisation and explainability outputs should be displayed where supported.
+- [ ] The associated clinical description or report should be available for analysis.
+- [ ] The user should be able to ask questions about the selected case.
+- [ ] The RAG assistant should be able to use relevant case information alongside its trusted medical knowledge.
+- [ ] The system should identify which information comes from the dataset, which comes from the image model and which comes from retrieved medical sources.
+- [ ] If the model's output appears inconsistent with the source-provided case information, the system should communicate that discrepancy rather than silently combining the results.
+Example user journey:
+
+A user selects a case containing an X-ray of a bone lesion.
+
+OsteoLens then:
+1. Displays the correct X-ray.
+2. Analyses the image.
+3. Displays the model's prediction and confidence.
+4. Highlights potentially suspicious regions if localisation is available.
+5. Generates a Grad-CAM visualisation.
+6. Displays the associated clinical description.
+7. Explains the medical terminology.
+8. Allows the user to ask the RAG assistant questions about the case and relevant medical knowledge.
+This is the connected experience we originally intended.
+10. Web application and user interface
+Core requirement
+The website must be a functional application, not just a collection of screens with buttons that do not work.
+- [ ] Create a professional homepage explaining OsteoLens.
+- [ ] Include clear navigation between the main sections.
+- [ ] Implement a functional Case Library.
+- [ ] Implement a functional X-ray Analysis page.
+- [ ] Implement a functional Report Analysis page.
+- [ ] Implement a functional Medical Knowledge section.
+- [ ] Implement a functional AI Assistant.
+- [ ] Connect the frontend to the backend and AI services.
+- [ ] Ensure buttons, dropdowns, filters, tabs and navigation links work.
+- [ ] Display loading indicators while images and AI results are being processed.
+- [ ] Display useful error messages when something fails.
+- [ ] Ensure that changing cases updates all relevant information.
+- [ ] Make the application responsive on different screen sizes.
+- [ ] Ensure the interface does not display fake results or non-functional controls.
+Expected navigation structure
+Section	Purpose
+Overview	Introduce OsteoLens and its capabilities
+Image Analysis	Analyse bone X-rays
+Case Library	Browse and select sample cases
+Report Analysis	Upload and understand reports
+Medical Knowledge	Explore bone tumour information
+AI Assistant	Ask medical knowledge questions
+About & Methodology	Explain the datasets, models and limitations
+
+11. Results and analysis dashboard
+The application should present results in a clear, organised way.
+- [ ] Display the selected Case ID.
+- [ ] Display the original X-ray.
+- [ ] Display the AI classification.
+- [ ] Display confidence scores.
+- [ ] Display localisation results, where available.
+- [ ] Display Grad-CAM visualisations.
+- [ ] Display relevant clinical information.
+- [ ] Display the report summary, where available.
+- [ ] Display the sources used by the RAG assistant.
+- [ ] Clearly label AI-generated content.
+- [ ] Provide an organised analysis summary.
+- [ ] Optionally allow users to generate or download a PDF summary of the educational analysis.
+12. Technical architecture and backend
+The system needs a properly connected technical structure.
+- [ ] Frontend: React-based web application.
+- [ ] Backend: Python with FastAPI.
+- [ ] Image model: PyTorch or another suitable deep learning framework.
+- [ ] Database: Store case information, metadata and application records.
+- [ ] Image storage: Organise and retrieve the correct images for each case.
+- [ ] RAG system: Document ingestion, embeddings, retrieval and response generation.
+- [ ] Vector database: FAISS, Chroma or Qdrant.
+- [ ] Report processing: PDF/text extraction and OCR where required.
+- [ ] API integration: Connect the frontend to the backend and AI models.
+- [ ] Error handling: Handle missing images, failed predictions, unavailable documents and retrieval errors.
+- [ ] Deployment: Make the application accessible for the team and final demonstration.
+The components should be modular, but they must communicate properly with each other.
+13. Model testing and evaluation
+The project must demonstrate that the AI models actually work.
+
+Image model evaluation
+- [ ] Training, validation and test datasets.
+- [ ] Appropriate data splitting to reduce data leakage.
+- [ ] Accuracy.
+- [ ] Precision and recall.
+- [ ] F1-score.
+- [ ] Confusion matrix.
+- [ ] Sensitivity and specificity.
+- [ ] ROC-AUC where appropriate.
+- [ ] Evaluation of localisation performance if detection is implemented.
+RAG evaluation
+- [ ] Test a range of different medical questions.
+- [ ] Check whether the correct documents are retrieved.
+- [ ] Check whether generated answers are supported by the retrieved sources.
+- [ ] Check citation accuracy.
+- [ ] Test questions outside the narrow examples used during development.
+- [ ] Test how the chatbot handles questions it cannot answer.
+Application testing
+- [ ] Test all sample cases.
+- [ ] Test that images change correctly when cases change.
+- [ ] Test report uploads and extraction.
+- [ ] Test chatbot conversations.
+- [ ] Test frontend/backend communication.
+- [ ] Test error handling and missing data.
+14. Clinical advisory support
+We also discussed having a medical professional provide clinical advisory support.
+- [ ] Ask a relevant medical professional to review the project's scope.
+- [ ] Obtain feedback on the medical terminology used.
+- [ ] Review whether the case descriptions and explanations are appropriate.
+- [ ] Ask for feedback on the way benign and malignant tumour information is presented.
+- [ ] Review selected model outputs and explainability visualisations.
+- [ ] Review sample RAG responses for medical accuracy.
+- [ ] Use feedback to improve the wording and presentation of the application.
+This should be a lightweight advisory role. The doctor should not need to develop the application, collect patient data or attend frequent meetings.
+
+Clinical advisory feedback must not be described as clinical validation.
+15. Data privacy, ethics and limitations
+- [ ] Use publicly available datasets with appropriate permissions.
+- [ ] Check dataset licences before using or redistributing images and derived materials.
+- [ ] Keep the original dataset sources identifiable.
+- [ ] Do not use private hospital records for the initial prototype.
+- [ ] Do not upload real patient medical records without the necessary legal and institutional arrangements.
+- [ ] Consider KVKK requirements if personal health data is ever processed.
+- [ ] Clearly explain that OsteoLens is an academic research prototype.
+- [ ] Do not claim that the application can definitively diagnose cancer.
+- [ ] Do not present model predictions as a replacement for a radiologist or doctor.

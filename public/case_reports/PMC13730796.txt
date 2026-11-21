@@ -1,0 +1,15 @@
+Published case report excerpt
+Spinal Cord Compression Syndrome Revealing Thoracic Ewing Sarcoma in a Young Adult: A Case Report
+Bouchkara Kamal, BAAYOUD Karim, KADIRI ALAOUI Naji, Benyaich Zakariae, LMEJJATI Mohamed
+https://pmc.ncbi.nlm.nih.gov/articles/PMC13730796/
+CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Case sections extracted from the published article.
+
+Case presentation
+We report the case of a 20-year-old male with no significant past medical history who presented to the emergency department with symptoms of spinal cord compression that had been present for 10 days, characterized by heaviness in both lower limbs and sphincter dysfunction manifesting as urinary incontinence, with no associated signs of infection and no change in his general condition. Clinical examination revealed flaccid paraplegia with complete motor deficit (0/5), no signs of pyramidal tract involvement, a sensory level at T10, and a left paravertebral mass. The remainder of the physical examination was unremarkable.
+
+Magnetic resonance imaging (MRI) revealed an extensive intraspinal lesion extending from D10 to D12, appearing hyperintense on T1-weighted images and with mild T2 hyperintensity, which enhanced after gadolinium injection and extended into the left paravertebral soft tissues. (Figures 1, 2) Thoraco-abdominal-pelvic CT did not identify any other sites of involvement. The patient underwent a laminectomy of the D10 through D12 vertebrae with wide excision of the intraspinal and left paravertebral processes, with no intraoperative complications. The postoperative course was uneventful, with partial recovery of the deficit to 2/5.
+
+The pathological examination confirmed the diagnosis of Ewing’s sarcoma (Figure 3). The patient was referred to the oncology department, where he received chemotherapy according to the VAC protocol and stereotactic radiation therapy at a dose of 30 Gy, administered in 10 fractions. He also underwent physical therapy during his hospitalization and subsequently on an outpatient basis, alongside his oncological treatment.
+
+Six months later, the patient developed headaches and exophthalmos; A brain MRI was performed for these symptoms and revealed an orbital lesion (Figure 4). The patient’s case was reviewed by the oncology team to determine whether another course of chemotherapy was warranted.

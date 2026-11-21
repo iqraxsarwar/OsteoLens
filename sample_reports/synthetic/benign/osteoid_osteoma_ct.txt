@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Osteoid osteoma CT
+MODALITY / DOCUMENT TYPE: CT report
+
+Thin-section CT shows a synthetic 6 mm cortical lucency with central mineralisation in the proximal femur and surrounding sclerosis. The appearance may represent an osteoid osteoma in this fictional example. No biopsy result or treatment recommendation is included.

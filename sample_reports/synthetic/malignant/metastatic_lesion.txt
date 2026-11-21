@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT – NOT A REAL PATIENT RECORD
+
+TEST TITLE: Secondary bone lesion
+MODALITY / DOCUMENT TYPE: Oncology imaging note
+
+A synthetic CT note describes multiple sclerotic foci in the vertebral bodies in a fictional patient with a separately stated history of carcinoma. The note says osseous metastatic disease is a consideration. The primary pathology and current staging are not included in this document.

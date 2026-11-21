@@ -339,5 +339,6 @@
   "Lower Limb": "Lower Limb",
   "HEATMAP": "HEATMAP",
   "OVERLAY": "OVERLAY",
-  "Grad-CAM overlay": "Grad-CAM overlay"
+  "Grad-CAM overlay": "Grad-CAM overlay",
+  "Privacy": "Privacy"
 }

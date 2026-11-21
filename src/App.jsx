@@ -1,11 +1,12 @@
 import { useTranslation } from 'react-i18next'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import './App.css'
+import PrivacyCenter from './pages/PrivacyCenter'
 import LanguageSwitcher from './components/LanguageSwitcher'
 import { caseRecords, datasetInfo, filterCases } from './data/caseLibrary'
 import ImageViewer from './viewer/ImageViewer'
-import ReportAnalyzer from './pages/ReportAnalyzer'
-import RAGAssistant from './pages/RAGAssistant'
+import ReportAnalyzer from './pages/PublishedReportAnalyzer'
+import RAGAssistant from './pages/GuidedResearchAssistant'
 
 import { API_URL as INFERENCE_API , apiFetch } from './api'
 
@@ -43,33 +44,10 @@ export default function App() {
   const [analysis, setAnalysis] = useState(null)
   const [analysisState, setAnalysisState] = useState('idle')
   const [analysisError, setAnalysisError] = useState('')
-  const [caseReports, setCaseReports] = useState([])
-  const [caseReportsError, setCaseReportsError] = useState('')
-  const [openReportId, setOpenReportId] = useState(null)
-  const [reportDraftCaseId, setReportDraftCaseId] = useState('')
   const analysisRequest = useRef(0)
   const visibleCases = useMemo(() => filterCases(caseRecords, { query, classification, anatomy, source }), [query, classification, anatomy, source])
   const anatomyOptions = uniqueValues(caseRecords, 'anatomical_location')
   const classCounts = caseRecords.reduce((counts, record) => ({ ...counts, [record.classification]: (counts[record.classification] || 0) + 1 }), {})
-
-  useEffect(() => {
-    if (section !== 'Case library') return undefined
-    const controller = new AbortController()
-    apiFetch(`${INFERENCE_API}/api/reports?case_id=${encodeURIComponent(selected.case_id)}`, { signal: controller.signal })
-      .then(async (response) => {
-        const payload = await response.json().catch(() => ({}))
-        if (!response.ok) throw new Error(payload.detail || `Report service returned HTTP ${response.status}.`)
-        setCaseReports(payload.reports || [])
-        setCaseReportsError('')
-      })
-      .catch((error) => {
-        if (error.name !== 'AbortError') {
-          setCaseReports([])
-          setCaseReportsError('Associated reports could not be loaded from the local report store.')
-        }
-      })
-    return () => controller.abort()
-  }, [section, selected.case_id])
 
   function selectCase(record) {
     analysisRequest.current += 1
@@ -85,11 +63,7 @@ export default function App() {
     setSection('RAG AI Assistant')
   }
 
-  function openReport(reportId = null, preselectedCaseId = '') {
-    setOpenReportId(reportId)
-    setReportDraftCaseId(preselectedCaseId)
-    setSection('Report analyser')
-  }
+  function openReport() { setSection('Report analyser') }
 
   async function analyzeSelectedCase() {
     const requestId = ++analysisRequest.current
@@ -131,7 +105,8 @@ export default function App() {
 
     <main className="main-area">
       <header className="topbar"><div className="breadcrumbs">{t("Workspace")}{' '}<span>/</span> {t(section)}</div><div className="top-actions"><LanguageSwitcher/><span className="status-live"><i/>{' '}{t("DATASET CONNECTED")}</span><div className="top-avatar">{t("OL")}</div></div></header>
-      {section === 'Case library' ? <>
+      <div className="privacy-banner"><span>{i18n.language === 'tr' ? 'Araştırma demosu · Kişisel rapor kabul edilmez' : 'Research demo · Personal reports are not accepted'}</span><button onClick={() => setSection('Privacy')}>{i18n.language === 'tr' ? 'Gizlilik ve veri koruma' : 'Privacy and data protection'}</button></div>
+      {section === 'Privacy' ? <PrivacyCenter/> : section === 'Case library' ? <>
         <section className="page-heading"><div><div className="eyebrow">{t("BONE IMAGING, UNDERSTOOD.")}</div><h1>{t("Case library")}</h1><p>{t("Browse source-labelled BTXRD radiograph records. Select a case to load its original image and metadata.")}</p></div><div className="page-heading-actions"><button className="secondary-button" onClick={() => openAssistant(false)}><Icon name="spark" size={14}/>{' '}{t("Research assistant")}</button><a className="primary-button" href={datasetInfo.source_url} target="_blank" rel="noreferrer"><Icon name="external" size={15}/>{' '}{t("Dataset source")}</a></div></section>
         <section className="metrics">
           <div className="metric"><span>{t("SOURCE IMAGE RECORDS")}</span><b>{caseRecords.length}</b><small>{caseRecords.length}{' '}{t("selected samples")}</small></div>
@@ -171,15 +146,12 @@ export default function App() {
               <div className="record-grid"><div><span>{t("ANATOMICAL LOCATION")}</span><b>{selected.anatomical_location.map(pretty).join(', ') || t("Unavailable")}</b></div><div><span>{t("PROJECTION")}</span><b>{selected.metadata.projection.map(pretty).join(', ') || t("Unavailable")}</b></div><div><span>{t("AGE / SEX (SOURCE)")}</span><b>{selected.metadata.age_years} / {t(selected.metadata.sex)}</b></div><div><span>{t("COLLECTION CENTER")}</span><b>{selected.metadata.collection_center}</b></div></div>
               <div className="description-missing"><Icon name="info" size={15}/><span><b>{t("Clinical description unavailable.")}</b>{' '}{t("BTXRD provides structured labels and metadata for this record, not a free-text case narrative.")}</span></div>
               <a className="source-citation" href={selected.source_url} target="_blank" rel="noreferrer">{selected.source_citation} <Icon name="external" size={13}/></a>
-              <div className="case-report-heading"><div><div className="eyebrow">{t("USER-ASSOCIATED REPORTS")}</div><b>{caseReports.length}{' '}{t("saved for")}{' '}{selected.case_id}</b></div><button type="button" className="secondary-button" onClick={() => openReport(null, selected.case_id)}>{t("Add report")}</button></div>
-              {caseReportsError && <p className="case-reports-error" role="alert">{t(caseReportsError)}</p>}
-              {!caseReportsError && caseReports.length === 0 && <p className="case-reports-empty">{t("No report has been explicitly associated with this case.")}</p>}
-              {caseReports.map((report) => <div className="case-report-item" key={report.report_id}><span><b>{report.filename}</b><small>{report.uploaded_at ? new Date(report.uploaded_at).toLocaleString(i18n.language === 'tr' ? 'tr-TR' : 'en-GB') : t("Upload date unavailable")} · {report.extraction_status}</small></span><button type="button" onClick={() => openReport(report.report_id)}>{t("Open report")}</button></div>)}
+              <p className="privacy-notice">{i18n.language === 'tr' ? 'Kişisel rapor yükleme ve olguya bağlama kapalıdır. Rapor analiz aracında yayımlanmış örnekleri inceleyebilirsiniz.' : 'Personal report uploads and case association are disabled. Published examples are available in the report analyser.'}</p>
             </div>
           </section>
         </div>
         <div className="phase-note"><Icon name="shield" size={14}/><span>{t("Research output only. Source labels are separate from model predictions. Grad-CAM indicates image regions influencing a prediction; it is not a tumour boundary or diagnosis. Lesion localization is unavailable.")}</span><a href={selected.license_url} target="_blank" rel="noreferrer">{t("CC BY 4.0")}</a></div>
-      </> : section === 'Dataset information' ? <section className="placeholder-page"><div className="eyebrow">{t("DATA PROVENANCE")}</div><h1>{t("Dataset information")}</h1><p>{t("Source details and limitations for the current sample library.")}</p><div className="placeholder-card"><div className="assistant-icon"><Icon name="book"/></div><h2>{datasetInfo.name}</h2><p>{datasetInfo.citation}</p><p><b>{t("License:")}</b> <a href={datasetInfo.license_url} target="_blank" rel="noreferrer">{datasetInfo.license}</a></p><p><b>{t("Sample:")}</b> {caseRecords.length}{' '}{t("real source image records, selected evenly across the dataset’s Normal, Benign, and Malignant labels. Original image IDs and SHA-256 checksums are included in the manifest.")}</p><p><b>{t("Clinical text:")}</b>{' '}{t("BTXRD provides structured metadata but no free-text case description in the included source file. No narrative has been added or inferred.")}</p><p><b>{t("Patient linkage:")}</b>{' '}{t("The dataset record does not expose a verified patient-level identifier here. The")}{' '}{caseRecords.length}{' '}{t("records have distinct image checksums. Patient-level uniqueness is unverified.")}</p><p><b>{t("Full source archive:")}</b> {datasetInfo.archive}{t("; archive MD5")}{' '}{datasetInfo.archive_md5}.</p><a className="secondary-button" href={datasetInfo.source_url} target="_blank" rel="noreferrer">{t("Open BTXRD on Figshare")}{' '}<Icon name="external" size={14}/></a></div></section> : section === 'Report analyser' ? <ReportAnalyzer initialReportId={openReportId} initialCaseId={reportDraftCaseId} /> : <RAGAssistant selectedCase={selected} modelAnalysis={analysisState === 'complete' ? analysis : null} initialCaseMode={assistantCaseMode}/ >}
+      </> : section === 'Dataset information' ? <section className="placeholder-page"><div className="eyebrow">{t("DATA PROVENANCE")}</div><h1>{t("Dataset information")}</h1><p>{t("Source details and limitations for the current sample library.")}</p><div className="placeholder-card"><div className="assistant-icon"><Icon name="book"/></div><h2>{datasetInfo.name}</h2><p>{datasetInfo.citation}</p><p><b>{t("License:")}</b> <a href={datasetInfo.license_url} target="_blank" rel="noreferrer">{datasetInfo.license}</a></p><p><b>{t("Sample:")}</b> {caseRecords.length}{' '}{t("real source image records, selected evenly across the dataset’s Normal, Benign, and Malignant labels. Original image IDs and SHA-256 checksums are included in the manifest.")}</p><p><b>{t("Clinical text:")}</b>{' '}{t("BTXRD provides structured metadata but no free-text case description in the included source file. No narrative has been added or inferred.")}</p><p><b>{t("Patient linkage:")}</b>{' '}{t("The dataset record does not expose a verified patient-level identifier here. The")}{' '}{caseRecords.length}{' '}{t("records have distinct image checksums. Patient-level uniqueness is unverified.")}</p><p><b>{t("Full source archive:")}</b> {datasetInfo.archive}{t("; archive MD5")}{' '}{datasetInfo.archive_md5}.</p><a className="secondary-button" href={datasetInfo.source_url} target="_blank" rel="noreferrer">{t("Open BTXRD on Figshare")}{' '}<Icon name="external" size={14}/></a></div></section> : section === 'Report analyser' ? <ReportAnalyzer onPrivacy={() => setSection('Privacy')} /> : <RAGAssistant onPrivacy={() => setSection('Privacy')} selectedCase={selected} modelAnalysis={analysisState === 'complete' ? analysis : null} initialCaseMode={assistantCaseMode}/ >}
       <footer className="footer"><span>{t("OSTEOLENS")}{' '}<i>·</i>{' '}{t("RESEARCH PROTOTYPE")}</span><span>{t("Bone imaging, understood.")}</span><span>{section === 'Report analyser' ? t("Phase 5 · Report analyser") : section === 'RAG AI Assistant' ? t("Phase 6 · Evidence-grounded research") : t("Phase 4 · Research image analysis")}</span></footer>
     </main>
   </div>

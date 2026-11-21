@@ -14,6 +14,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from backend.public_access import PublicAccessMiddleware, PUBLIC_MODE, PUBLIC_ORIGIN
 from fastapi.staticfiles import StaticFiles
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
+from pydantic import ConfigDict
+from backend.privacy import PrivacyGuardMiddleware, privacy_status, QUESTIONS, operator_config, release_issues
+
+if PUBLIC_MODE and release_issues(operator_config()):
+    raise RuntimeError('Public deployment is blocked until the controller, contact, technical-data basis and provider review are completed. See PRIVACY_REVIEW.md.')
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 CASE_MANIFEST_PATH = PROJECT_ROOT / "src" / "data" / "cases.json"
@@ -32,7 +39,70 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.add_middleware(PublicAccessMiddleware)
+app.add_middleware(PrivacyGuardMiddleware)
 _inference_lock = Lock()
+
+
+@app.exception_handler(RequestValidationError)
+async def private_validation_error(_request, _exception):
+    return JSONResponse({'detail':'Invalid research selection.'}, status_code=422)
+
+
+@app.get('/api/privacy')
+def get_privacy_status():
+    return privacy_status()
+
+
+class ResearchSelection(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    question_id: Literal['compare_tumours','imaging','transition','benign_malignant','case_summary','heatmap','source_label','limitations']
+    language: Literal['en','tr'] = 'en'
+    case_id: str | None = Field(default=None, pattern=r'^BTXRD-IMG[0-9]{6}$')
+
+
+@app.post('/api/assistant/research')
+def selected_research_question(selection: ResearchSelection):
+    from backend.rag_assistant import answer_question, RAGUnavailable
+    if selection.case_id and selection.case_id not in _get_cases():
+        raise HTTPException(422, 'Select an available source case.')
+    if selection.question_id in {'case_summary','source_label','limitations'} and not selection.case_id:
+        raise HTTPException(422, 'Select a source case first.')
+    try:
+        return answer_question(QUESTIONS[selection.question_id], case_id=selection.case_id,
+            model_result=_analysis_context_by_case.get(selection.case_id or ''), language=selection.language)
+    except RAGUnavailable as exc:
+        raise HTTPException(503, 'Research service unavailable. Please try again later.') from exc
+
+
+@app.post('/api/reports/examples/{source_id}')
+def analyze_published_example(source_id: str):
+    from backend.report_analyzer import process_report, clear_report_session
+    sources = json.loads((PROJECT_ROOT/'src/data/openAccessReports.json').read_text(encoding='utf-8'))
+    source = next((item for item in sources if item['id'] == source_id), None)
+    if not source: raise HTTPException(404, 'Published example not found.')
+    directory = (PROJECT_ROOT/'public/case_reports').resolve()
+    path = (directory / (source_id+'.txt')).resolve()
+    if path.parent != directory: raise HTTPException(404, 'Published example not found.')
+    result = process_report(source_id+'.txt', path.read_bytes(), retain_session=False)
+    clear_report_session(result['report_id'])
+    result.pop('report_id', None)
+    return {**result, 'source':source, 'persistence':{'saved':False}, 'mode':'published_examples_only'}
+
+
+@app.post('/api/privacy/erase-session')
+def erase_previous_session():
+    from backend.public_access import report_owner
+    from backend.report_store import list_reports, delete_report
+    from backend.report_analyzer import clear_report_session
+    count = 0
+    if PUBLIC_MODE and report_owner.get() != 'local':
+        for item in list_reports():
+            delete_report(item['report_id'])
+            clear_report_session(item['report_id'])
+            count += 1
+    response = JSONResponse({'deleted_reports':count,'scope':'this browser session only'})
+    response.delete_cookie('osteolens_session',path='/api',secure=True,httponly=True,samesite='lax')
+    return response
 
 
 class ReportQuestion(BaseModel):

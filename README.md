@@ -2,13 +2,15 @@
 
 **Bone imaging, understood.**
 
+**Privacy status — 22 November 2026:** personal report uploads and free-text chat are disabled in both local and public interfaces/APIs. The public demo is offline pending controller/contact, legal-basis and provider-transfer review. The research prototype is not certified KVKK-compliant. See [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md) for implemented controls and unresolved obligations.
+
 See [QUALITY_ASSURANCE.md](QUALITY_ASSURANCE.md) for the latest tested/partial/unavailable feature status. A collection of synthetic-only Report Analyser fixtures is provided in [sample_reports/](sample_reports/README.md); these files are not BTXRD records and are never automatically linked to cases.
 
 OsteoLens contains a source-linked library of 60 distinct BTXRD radiograph files, plus a ResNet-18 research inference and Grad-CAM path. The case manifest records source IDs, dataset labels, metadata, citation, license, image path, and SHA-256 checksum. The UI loads the selected record's actual JPEG, supports case filters and image navigation, and can request model inference/Grad-CAM from the local API when its PyTorch runtime is available.
 
 ## English and Turkish
 
-Use the **English / Türkçe** controls in the header. The choice persists in this browser. Navigation, controls, case/heatmap explanations and report terminology are translated. Source quotations, publication titles and provenance remain in their original language. Turkish research questions are translated for the existing English-language retrieval index and answers are requested in Turkish using the unchanged Qwen model. Translation quality is not clinically validated.
+Use the **English / Türkçe** controls in the header. The choice persists in this browser. Navigation, controls, case/heatmap explanations and report terminology are translated. Source quotations, publication titles and provenance remain in their original language. Research questions are chosen from a fixed menu, with answers requested in the selected language using the unchanged Qwen model. Translation quality is not clinically validated.
 
 The report analyser also offers **34 attributed CC BY 4.0 published case excerpts**, independent of the 60 BTXRD image records.
 
@@ -26,7 +28,7 @@ Start the inference API in one terminal:
 
 ```powershell
 python -m pip install -r backend/requirements.txt
-python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000
+python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --no-access-log
 ```
 
 Start the frontend in another terminal:
@@ -56,14 +58,14 @@ MedPix is not included in the sample library. It has case-linked image/text cont
 
 The Phase 3 Colab workflow and inference loader are in [`training/README.md`](training/README.md). A trained ResNet-18 checkpoint is present locally at `models/checkpoints/osteolens_btxrd_resnet18.pth` (it is excluded from Git). The local inference API and Phase 4 limitations are documented in [`backend/README.md`](backend/README.md). No localization weights or annotation JSON files are present in this workspace; the full BTXRD annotation archive must be available before inspecting joins or evaluating a localization model.
 
-## Medical report analyser (Phase 5)
+## Medical report analyser
 
-Open **Report analyser** in the left navigation, select a PDF or TXT file, and choose **Analyse report**. The local API displays extracted source text, rule-based fields, report-sentence summaries, term definitions, and document-only question retrieval. Findings and summaries quote the report; they do not provide a diagnosis. Turkish report questions use the existing Qwen service only to translate the search query; original quotations stay in their source language. PDF text extraction uses PyMuPDF; scanned-page OCR works only when Tesseract is separately installed and on `PATH`. See [backend/README.md](backend/README.md) for endpoint, retention, and dependency details.
+Choose **Report analyser**, then select one of the 34 published CC BY 4.0 case excerpts. The server reads its own allowlisted source file and returns extracted text, source-sentence summaries, structured findings and terminology. No visitor file is accepted and no new report is saved. The legacy PDF/TXT processing utilities remain for offline synthetic tests; their upload, saved-report retrieval, association and question APIs are blocked.
 
-Validate with `python -m unittest discover -s backend/tests -v`. TXT upload, report Q&A, validation errors, the API route, and generated-PDF extraction pass in this workspace. Scanned-PDF OCR still requires a separately installed Tesseract executable.
+The bilingual **Privacy and data protection** page explains the restricted mode, shows unresolved controller information, offers a locally downloaded rights-request draft and supports erasure of legacy uploads belonging to a verified old browser-session cookie. It does not claim to replace a complete Article 10 notice or a statutory rights process.
 
-For repeatable practice files, use the 31 clearly identified synthetic fixtures in [`sample_reports/README.md`](sample_reports/README.md). The collection includes 25 distinct fictional scenarios, four text PDF variants, an image-only OCR fixture, and an empty invalid-input fixture. Successfully processed uploads are stored on this computer under `backend/data/reports/`; select a case explicitly to associate, and use the report page to unlink or delete it. Local development retains its single-user store. Public mode uses a separate browser-session-isolated store with automatic expiry; storage remains unencrypted. Use public or synthetic documents only. Report context is sent to RAG only after an explicit per-question selection.
+Validate with `python -m unittest discover -s backend/tests -v`. Tests cover rejection before body parsing, allowlisted examples without storage, rejection of arbitrary assistant content, non-reflecting errors, security headers, legacy owner-scoped deletion and the public-release gate. Synthetic fixtures remain in `sample_reports/` for internal testing.
 
 ## RAG AI Assistant (Phase 6)
 
-RAG AI Assistant is a fourth independent workspace feature; Report Analyser remains separate. The assistant uses a local sentence embedding model, persistent Chroma vectors, hybrid semantic/lexical retrieval, and an optional local Ollama generator. No paid API is used. Its ready state stays disabled until the RAG requirements are installed, permitted sources are ingested, and a local Ollama model is available. See [backend/README.md](backend/README.md) for setup, source licenses, evaluation, and case-context limits. Run the 24-question review set with `python -m backend.rag_eval`; human review is required and no medical accuracy score is claimed.
+RAG AI Assistant provides a fixed menu of literature, published-case and heatmap questions. Visitors cannot submit arbitrary text, files or personal report context. Report Analyser remains separate. The assistant uses a local sentence embedding model, persistent Chroma vectors, hybrid semantic/lexical retrieval, and an optional local Ollama generator. No paid API is used. Its ready state stays disabled until the RAG requirements are installed, permitted sources are ingested, and a local Ollama model is available. See [backend/README.md](backend/README.md) for setup, source licenses, evaluation, and case-context limits. Run the 24-question review set with `python -m backend.rag_eval`; human review is required and no medical accuracy score is claimed.

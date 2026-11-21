@@ -296,7 +296,7 @@ def analyze_extracted_pages(pages: list[SourcePage]) -> dict[str, Any]:
     }
 
 
-def process_report(filename: str, content: bytes) -> dict[str, Any]:
+def process_report(filename: str, content: bytes, *, retain_session: bool = True) -> dict[str, Any]:
     safe_name = (filename or "").replace("\\", "/").split("/")[-1]
     suffix = safe_name.rsplit(".", 1)[-1].casefold() if "." in safe_name else ""
     if not safe_name or suffix not in {"pdf", "txt"}:
@@ -337,9 +337,10 @@ def process_report(filename: str, content: bytes) -> dict[str, Any]:
         "pages": page_results,
         **{key: value for key, value in result.items() if key != "sentence_index"},
     }
-    _REPORT_SESSIONS[report_id] = {"pages": pages, "sentences": result["sentence_index"], "analysis": result}
-    while len(_REPORT_SESSIONS) > MAX_LIVE_REPORTS:
-        _REPORT_SESSIONS.popitem(last=False)
+    if retain_session:
+        _REPORT_SESSIONS[report_id] = {"pages": pages, "sentences": result["sentence_index"], "analysis": result}
+        while len(_REPORT_SESSIONS) > MAX_LIVE_REPORTS:
+            _REPORT_SESSIONS.popitem(last=False)
     return response
 
 

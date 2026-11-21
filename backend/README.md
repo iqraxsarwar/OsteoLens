@@ -1,5 +1,7 @@
 # OsteoLens local research API
 
+> Privacy update (22 November 2026): personal upload/report/chat endpoints described in historical sections below are now blocked by `PrivacyGuardMiddleware`. Use `/api/reports/examples/{source_id}`, `/api/assistant/research` and `/api/privacy` for the restricted interface. Public startup is blocked pending operator review. See `../PRIVACY_REVIEW.md` and `../DEPLOYMENT.md`; these take precedence over historical setup descriptions.
+
 The React viewer calls this local FastAPI service to load the saved ResNet-18 checkpoint, verify the selected sample image against `src/data/cases.json`, and produce model scores plus a Grad-CAM heatmap and overlay. The API does not create detection boxes or segmentation masks. Those require a separately trained and evaluated localization model.
 
 ## Requirements

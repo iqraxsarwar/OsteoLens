@@ -53,17 +53,15 @@ class ReportAnalyzerTests(unittest.TestCase):
         self.assertIn("osteosarcoma", result["original_text"].casefold())
         self.assertEqual(result["document"]["page_count"], 1)
 
-    def test_api_upload_and_report_question_endpoints(self):
+    def test_legacy_upload_and_report_question_endpoints_are_disabled(self):
         client = TestClient(app)
         response = client.post("/api/reports/analyze", files={"file": ("sample.txt", REPORT_TEXT.encode(), "text/plain")})
-        self.assertEqual(response.status_code, 200, response.text)
-        payload = response.json()
-        self.assertEqual(payload["original_text"], REPORT_TEXT)
-        question = client.post("/api/reports/ask", json={"report_id": payload["report_id"], "question": "What does it say about the lesion?"})
-        self.assertEqual(question.status_code, 200, question.text)
-        self.assertIn("lytic lesion", question.json()["answer"])
+        self.assertEqual(response.status_code, 403, response.text)
+        self.assertNotIn(REPORT_TEXT, response.text)
+        question = client.post("/api/reports/ask", json={"report_id": "0"*32, "question": "What does it say about the lesion?"})
+        self.assertEqual(question.status_code, 403, question.text)
         bad = client.post("/api/reports/analyze", files={"file": ("scan.docx", b"doc", "application/octet-stream")})
-        self.assertEqual(bad.status_code, 415)
+        self.assertEqual(bad.status_code, 403)
 
 
 if __name__ == "__main__":

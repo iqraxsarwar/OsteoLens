@@ -18,6 +18,12 @@ def main():
     parser.add_argument('--port',type=int,default=8002)
     args=parser.parse_args()
     root=Path(__file__).resolve().parents[1]
+    # Complete the operator's review before establishing any public connection.
+    sys.path.insert(0,str(root))
+    from backend.privacy import operator_config, release_issues
+    issues=release_issues(operator_config())
+    if issues:
+        sys.exit('Public launch blocked: privacy/operator review is incomplete ('+', '.join(issues)+'). See PRIVACY_REVIEW.md. Personal uploads remain disabled regardless of this review.')
     runtime=root/'deploy/runtime';runtime.mkdir(parents=True,exist_ok=True)
     if not (root/'dist/index.html').is_file():
         sys.exit('Run npm run build first.')
@@ -55,7 +61,7 @@ def main():
             env={**os.environ,'OSTEOLENS_PUBLIC_MODE':'1','OSTEOLENS_PUBLIC_ORIGIN':origin,
                 'OSTEOLENS_SESSION_SECRET_FILE':str(secret),'OSTEOLENS_REPORT_DATA_DIR':str(root/'backend/data/public-reports')}
             api=subprocess.Popen([sys.executable,'-m','uvicorn','backend.main:app','--host','127.0.0.1','--port',str(args.port),
-                '--workers','1','--proxy-headers','--forwarded-allow-ips','127.0.0.1'],cwd=root,env=env,
+                '--workers','1','--no-access-log','--proxy-headers','--forwarded-allow-ips','127.0.0.1'],cwd=root,env=env,
                 stdout=api_log,stderr=subprocess.STDOUT,creationflags=flags)
             children.append(api)
             ready=False

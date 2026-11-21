@@ -171,7 +171,7 @@ class RAGAssistantTests(unittest.TestCase):
         client = TestClient(app)
         with patch("backend.rag_assistant.answer_question", side_effect=RAGUnavailable("RAG is not configured.")), \
              patch("backend.rag_assistant.assistant_status", return_value={"ready": False, "indexed_chunks": 0}):
-            response = client.post("/api/assistant/chat", json={"question": "Explain osteosarcoma"})
+            response = client.post("/api/assistant/research", json={"question_id": "compare_tumours"})
             status = client.get("/api/assistant/status")
         self.assertEqual(response.status_code, 503)
         self.assertEqual(status.status_code, 200)

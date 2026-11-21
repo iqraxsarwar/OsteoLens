@@ -1,5 +1,7 @@
 # Public research demo
 
+**Currently blocked:** the previous public tunnel is stopped. Complete the substantive review in [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md) before restarting. Both the launcher and a public-mode backend enforce the review configuration; personal uploads remain disabled permanently in this version.
+
 The production React build and FastAPI API are served from the same origin. Run `npm ci` and `npm run build`; FastAPI serves `dist/` automatically. Never publish the development server or the existing private report store directly.
 
 ## Required runtime
@@ -8,11 +10,13 @@ Use the existing Python environment with `backend/requirements.txt` and `backend
 
 ## Public mode
 
-Set `OSTEOLENS_PUBLIC_MODE=1`, `OSTEOLENS_PUBLIC_ORIGIN` to the exact HTTPS website origin, and a cryptographically random `OSTEOLENS_SESSION_SECRET` of at least 32 characters (or `OSTEOLENS_SESSION_SECRET_FILE`). Use a separate `OSTEOLENS_REPORT_DATA_DIR` for public uploads. Start **one Uvicorn worker** on a loopback port behind an HTTPS reverse proxy. The report and model concurrency guards are process-local; multiple workers are not supported by this demo deployment.
+Set `OSTEOLENS_PUBLIC_MODE=1`, `OSTEOLENS_PUBLIC_ORIGIN` to the exact HTTPS website origin, and a cryptographically random `OSTEOLENS_SESSION_SECRET` of at least 32 characters (or `OSTEOLENS_SESSION_SECRET_FILE`). Keep any legacy public report store separate from the local private store. New uploads are disabled. Start **one Uvicorn worker** on a loopback port behind an HTTPS reverse proxy. The report and model concurrency guards are process-local; multiple workers are not supported by this demo deployment.
 
-Public mode separates uploads by signed, secure, HttpOnly browser cookies; checks Origin on mutations; limits API requests and concurrent POSTs; limits public upload storage; and removes public reports older than 24 hours during periodic request-triggered cleanup. It never removes the pre-existing local reports. Cookies are not user accounts: losing a cookie loses access to its reports. Storage is not encrypted. Use only public or synthetic documents.
+The privacy middleware blocks legacy report upload/read/question/association routes and unrestricted chat before reading request bodies. Published examples use allowlisted IDs and are not saved. Guided research questions accept no arbitrary text/history. No new session cookie is created. A verified legacy cookie is used only for owner-scoped erasure of old uploads. The old retention cleanup remains a fallback; it is not a comprehensive disposal programme.
 
-Configure the reverse proxy to cap request bodies at 21 MiB and trust forwarded client addresses only from that proxy. Ollama and the backend must not expose ports directly to the internet. Public demo controls are not a clinical or enterprise security certification.
+Public mode checks Origin, applies request/concurrency limits, uses brief keyed IP hashes in memory for throttling and suppresses Uvicorn access logs. Responses use no-referrer, no-store and a restrictive content security policy. Review infrastructure/provider logs separately. Never expose Ollama directly. These controls are not a clinical, legal or enterprise security certification.
+
+Create `deploy/runtime/privacy-config.json` only after the responsible operator completes the review; use `deploy/privacy-config.example.json` as the schema. Do not invent an operator, contact, legal basis or transfer arrangement to bypass the gate. The configuration is Git-ignored. Notice fields are displayed to visitors.
 
 ## Free hosting constraint
 
@@ -28,7 +32,7 @@ The configured environment and verified portable Cloudflare helper are already p
 .\deploy\Start-PublicDemo.ps1
 ```
 
-Keep that terminal running. It prints the new HTTPS URL. The current URL and process IDs are also recorded in `deploy/runtime/public-demo.json` (excluded from Git). Closing VS Code is safe only if it does not close the terminal running the launcher. The demo initially started by Codex runs in the background.
+Keep that terminal running. It prints the new HTTPS URL. The current URL and process IDs are also recorded in `deploy/runtime/public-demo.json` (excluded from Git). Closing VS Code is safe only if it does not close the terminal running the launcher. The earlier background demo has been stopped for privacy review.
 
 Alternatively, run Python directly without changing PowerShell's script policy:
 
@@ -46,11 +50,13 @@ The stop script checks the launcher's process identity and stops only its proces
 
 On a different computer, provide the configured Python environment and the [official Cloudflare executable](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/downloads/) using the scripts' `-Python` and `-Cloudflared` parameters. The helper is excluded from Git.
 
-## Acceptance checks
+## Acceptance checks after an approved release
 
-1. Open the public HTTPS URL in a fresh browser, switch English/Türkçe and reload.
-2. Check 60 radiographs, filtering, real ResNet-18 inference and the Grad-CAM explanation.
-3. Analyse one of the 34 attributed public report excerpts.
-4. Confirm RAG displays 638 chunks, `qwen2.5:0.5b` and ready; ask a question and inspect actual citations.
-5. In another browser session confirm the first visitor's reports are not listed or retrievable.
-6. Confirm network requests use the public HTTPS origin, never localhost or port 8001.
+1. Verify English/Türkçe notices and the approved controller/contact details.
+2. Confirm there is no personal file picker or free-text assistant input.
+3. Confirm direct upload and old chat API calls return 403 before body parsing.
+4. Analyse one of the 34 published examples; confirm no saved user report or persistent report session appears.
+5. Verify X-ray inference and guided RAG with citations and unchanged model/index.
+6. Check legacy erasure cannot affect another browser's data, and validate the broader deletion procedure separately.
+7. Confirm no third-party font/analytics requests and no reflected request content in errors.
+8. Review actual provider routing, contracts, logging and retention before opening the service to users.

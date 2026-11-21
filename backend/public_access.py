@@ -48,7 +48,7 @@ class PublicAccessMiddleware:
         if request.method not in {'GET', 'HEAD', 'OPTIONS'} and origin != PUBLIC_ORIGIN:
             return await JSONResponse({'detail': 'Use this website to submit requests.'}, 403)(scope, receive, send)
         # The reverse proxy is the only exposed service. Uvicorn trusts only that proxy.
-        address = scope.get('client', ('unknown',))[0]
+        address = hmac.new(SESSION_SECRET.encode(), scope.get('client', ('unknown',))[0].encode(), hashlib.sha256).hexdigest()
         now = time.monotonic()
         self.requests = {key: value for key, value in self.requests.items() if value and now-value[-1] < 60}
         if len(self.requests) >= 2048 and address not in self.requests:
@@ -73,9 +73,8 @@ class PublicAccessMiddleware:
             if message['type'] == 'http.response.start':
                 headers = list(message.get('headers', []))
                 headers.append((b'cache-control', b'no-store'))
-                if not valid:
-                    value = f'osteolens_session={owner}.{self.sign(owner)}; Path=/api; HttpOnly; Secure; SameSite=Lax; Max-Age=86400'
-                    headers.append((b'set-cookie', value.encode()))
+                # Do not create new visitor identifiers. Existing signed cookies
+                # support deletion of legacy uploads only.
                 message = {**message, 'headers': headers}
             await send(message)
         try:

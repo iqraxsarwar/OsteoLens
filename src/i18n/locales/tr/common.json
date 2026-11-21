@@ -339,5 +339,6 @@
   "Lower Limb": "Alt ekstremite",
   "HEATMAP": "ISI HARİTASI",
   "OVERLAY": "BİNDİRME",
-  "Grad-CAM overlay": "Grad-CAM bindirmesi"
+  "Grad-CAM overlay": "Grad-CAM bindirmesi",
+  "Privacy": "Gizlilik"
 }

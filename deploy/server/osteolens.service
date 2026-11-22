@@ -1,0 +1,34 @@
+[Unit]
+Description=OsteoLens restricted research application
+After=network-online.target ollama.service
+Wants=network-online.target
+StartLimitIntervalSec=300
+StartLimitBurst=3
+
+[Service]
+Type=simple
+User=osteolens
+Group=osteolens
+WorkingDirectory=/opt/osteolens
+EnvironmentFile=/etc/osteolens/server.env
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=MPLCONFIGDIR=/var/lib/osteolens/cache/matplotlib
+Environment=HF_HOME=/var/lib/osteolens/cache/huggingface
+Environment=HF_HUB_OFFLINE=1
+Environment=HF_HUB_DISABLE_TELEMETRY=1
+Environment=ANONYMIZED_TELEMETRY=False
+ExecStart=/opt/osteolens/.venv/bin/python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --workers 1 --no-access-log --proxy-headers --forwarded-allow-ips=127.0.0.1
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=60
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/osteolens
+# Application exceptions can reach the journal. Configure and review journal
+# retention and access on the actual host; this is not a no-logging guarantee.
+
+[Install]
+WantedBy=multi-user.target

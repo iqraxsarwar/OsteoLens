@@ -4,6 +4,10 @@ Reviewed against official KVKK guidance on 22 November 2026. This is an engineer
 
 ## Current decision
 
+The deferred review was resumed on 22 November 2026. Technical controls and deployment requirements have been reviewed; closure remains pending the actual controller and approved privacy contact, confirmation of any past real-report use, and selection/review of the host. These are factual dependencies, not fields an automated review can supply. No approval configuration has been fabricated. The local research app remains available for inspection; the public service is not reopened.
+
+The installed Chroma 1.5.9 product-telemetry `capture` implementation was inspected and is a no-op. This narrow observation does not establish that every dependency or provider makes no outbound connection. The prepared server unit additionally disables Hugging Face telemetry and enables offline embedding-cache loading; those settings require validation on the eventual server.
+
 Personal health-report processing is disabled. The public tunnel was stopped. Public relaunch is blocked until the operator's identity, contact channel, technical-data basis, provider arrangements and review are completed. Completing the configuration does **not** enable personal uploads.
 
 The app retains 60 published BTXRD image records, the unchanged ResNet-18 checkpoint and 638-chunk RAG index, and 34 published report excerpts. Published/open-licensed material is not automatically anonymous or exempt from data-protection law. The operator must review source provenance, research permissions and re-identification risks separately.

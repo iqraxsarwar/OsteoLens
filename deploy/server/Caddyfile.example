@@ -1,0 +1,7 @@
+# Replace the hostname. Do not enable the site before the release review.
+# Direct DNS -> this server; do not add a CDN without reviewing its data flows.
+REPLACE_WITH_APPROVED_HOSTNAME {
+    reverse_proxy 127.0.0.1:8000
+    # Access logging is deliberately not enabled here. Caddy runtime/error logs
+    # and host/provider logs still require a documented retention policy.
+}

@@ -1,5 +1,7 @@
 # Public research demo
 
+For hosting independent of the laptop, use [the server handover](SERVER_HOSTING.md) and the templates in `deploy/server/`. These are prepared for a future Linux host; no remote deployment or permanent URL exists yet.
+
 **Currently blocked:** the previous public tunnel is stopped. Complete the substantive review in [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md) before restarting. Both the launcher and a public-mode backend enforce the review configuration; personal uploads remain disabled permanently in this version.
 
 The production React build and FastAPI API are served from the same origin. Run `npm ci` and `npm run build`; FastAPI serves `dist/` automatically. Never publish the development server or the existing private report store directly.

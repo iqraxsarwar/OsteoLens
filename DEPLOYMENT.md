@@ -14,7 +14,7 @@ Use the existing Python environment with `backend/requirements.txt` and `backend
 
 Set `OSTEOLENS_PUBLIC_MODE=1`, `OSTEOLENS_PUBLIC_ORIGIN` to the exact HTTPS website origin, and a cryptographically random `OSTEOLENS_SESSION_SECRET` of at least 32 characters (or `OSTEOLENS_SESSION_SECRET_FILE`). Keep any legacy public report store separate from the local private store. New uploads are disabled. Start **one Uvicorn worker** on a loopback port behind an HTTPS reverse proxy. The report and model concurrency guards are process-local; multiple workers are not supported by this demo deployment.
 
-The privacy middleware blocks legacy report upload/read/question/association routes and unrestricted chat before reading request bodies. Published examples use allowlisted IDs and are not saved. Guided research questions accept no arbitrary text/history. No new session cookie is created. A verified legacy cookie is used only for owner-scoped erasure of old uploads. The old retention cleanup remains a fallback; it is not a comprehensive disposal programme.
+The privacy middleware blocks legacy report upload/read/question/association routes and unrestricted chat before reading request bodies. Published examples use allowlisted IDs and are not saved. Research questions accept custom wording and validated published source/case identifiers. They do not accept chat history or arbitrary personal-report context. Browser-only personal report questions do not call the API. No new session cookie is created. A verified legacy cookie is used only for owner-scoped erasure of old uploads. The old retention cleanup remains a fallback; it is not a comprehensive disposal programme.
 
 Public mode checks Origin, applies request/concurrency limits, uses brief keyed IP hashes in memory for throttling and suppresses Uvicorn access logs. Responses use no-referrer, no-store and a restrictive content security policy. Review infrastructure/provider logs separately. Never expose Ollama directly. These controls are not a clinical, legal or enterprise security certification.
 
@@ -55,10 +55,10 @@ On a different computer, provide the configured Python environment and the [offi
 ## Acceptance checks after an approved release
 
 1. Verify English/Türkçe notices and the approved controller/contact details.
-2. Confirm there is no personal file picker or free-text assistant input.
+2. Confirm custom research questions work, and personal PDF/TXT selection processes locally without sending content or filenames.
 3. Confirm direct upload and old chat API calls return 403 before body parsing.
 4. Analyse one of the 34 published examples; confirm no saved user report or persistent report session appears.
-5. Verify X-ray inference and guided RAG with citations and unchanged model/index.
+5. Verify X-ray inference and custom RAG questions with citations and unchanged model/index.
 6. Check legacy erasure cannot affect another browser's data, and validate the broader deletion procedure separately.
 7. Confirm no third-party font/analytics requests and no reflected request content in errors.
 8. Review actual provider routing, contracts, logging and retention before opening the service to users.

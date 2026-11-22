@@ -5,7 +5,7 @@ from pathlib import Path
 from starlette.responses import JSONResponse
 
 ROOT = Path(__file__).resolve().parents[1]
-NOTICE_VERSION = '2026-11-22.1'
+NOTICE_VERSION = '2026-11-22.2'
 QUESTIONS = {
     'compare_tumours': 'How do osteosarcoma and Ewing sarcoma differ?',
     'imaging': 'What imaging modalities are used to assess a suspected bone tumour?',
@@ -39,8 +39,8 @@ def release_issues(config):
 def privacy_status():
     config = operator_config()
     fields = ('controller_name','privacy_email','technical_data_legal_basis','provider_transfer_assessment','technical_data_retention')
-    return {'notice_version': NOTICE_VERSION, 'mode': 'published_examples_only',
-            'personal_uploads_enabled': False, 'free_text_chat_enabled': False,
+    return {'notice_version': NOTICE_VERSION, 'mode': 'research_and_on_device_reports',
+            'personal_uploads_enabled': False, 'on_device_reports_enabled': True, 'free_text_chat_enabled': True,
             **{key:config.get(key) or None for key in fields}, 'release_ready': not release_issues(config)}
 
 
@@ -57,7 +57,7 @@ class PrivacyGuardMiddleware:
                 headers.extend([
                     (b'referrer-policy', b'no-referrer'), (b'x-content-type-options', b'nosniff'),
                     (b'permissions-policy', b'camera=(), microphone=(), geolocation=()'),
-                    (b'content-security-policy', b"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"),
+                    (b'content-security-policy', b"default-src 'self'; script-src 'self'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"),
                 ])
                 if path.startswith('/api') or path in {'', '/index.html'}:
                     headers = [(k,v) for k,v in headers if k.lower() != b'cache-control']
@@ -73,7 +73,7 @@ class PrivacyGuardMiddleware:
             headers = dict(scope['headers'])
             try: length = int(headers.get(b'content-length', b'0'))
             except ValueError: length = 99999
-            max_length = 1024 if path == '/api/assistant/research' else 0
+            max_length = 8192 if path == '/api/assistant/research' else 0
             if length > max_length or b'transfer-encoding' in headers:
                 return await JSONResponse({'detail':'This research endpoint does not accept document content.'},413)(scope, receive, privacy_send)
         await self.app(scope, receive, privacy_send)

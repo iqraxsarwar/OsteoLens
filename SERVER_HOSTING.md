@@ -44,8 +44,8 @@ No step above has been executed on a remote host yet. Linux unit/Caddy validatio
 
 - English/Turkish privacy notice identifies the real controller, contact, purposes, recipients, legal grounds, retention and rights procedure.
 - Homepage, 60-image library, one inference/Grad-CAM explanation, and one of 34 published report analyses work through the same HTTPS origin.
-- The actual RAG page shows **638 chunks**, **qwen2.5:0.5b**, ready, and answers a guided research question with citations.
-- Personal uploads and unrestricted text endpoints reject requests; no new visitor report or cookie is saved.
+- The actual RAG page shows **638 chunks**, **qwen2.5:0.5b**, ready, and answers a custom research question with citations.
+- Personal upload and legacy text endpoints reject requests; custom research questions use the bounded research endpoint. Personal PDF/TXT processing stays in the browser; no new visitor report or cookie is saved.
 - Ollama, the API loopback port, private artifacts and administrator interfaces are not publicly accessible.
 - HTTPS renewal, restart/reboot recovery, capacity limits, backups/restoration and log retention are checked on the chosen server.
 

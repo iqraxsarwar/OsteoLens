@@ -378,7 +378,7 @@ def select_report_context(report_result: dict[str, Any], question: str, limit: i
     ]
     query_tokens = {
         token for token in re.findall(r"[a-z0-9]+", (question or "").casefold())
-        if token not in _STOP_WORDS and len(token) > 1
+        if token not in _STOP_WORDS | {'report', 'reports', 'say', 'says', 'does', 'this', 'tell', 'about', 'available', 'information'} and len(token) > 1
     }
     ranked: list[tuple[int, dict[str, Any]]] = []
     for sentence in _sentences(pages):

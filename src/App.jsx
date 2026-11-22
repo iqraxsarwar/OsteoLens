@@ -105,7 +105,7 @@ export default function App() {
 
     <main className="main-area">
       <header className="topbar"><div className="breadcrumbs">{t("Workspace")}{' '}<span>/</span> {t(section)}</div><div className="top-actions"><LanguageSwitcher/><span className="status-live"><i/>{' '}{t("DATASET CONNECTED")}</span><div className="top-avatar">{t("OL")}</div></div></header>
-      <div className="privacy-banner"><span>{i18n.language === 'tr' ? 'Araştırma demosu · Kişisel rapor kabul edilmez' : 'Research demo · Personal reports are not accepted'}</span><button onClick={() => setSection('Privacy')}>{i18n.language === 'tr' ? 'Gizlilik ve veri koruma' : 'Privacy and data protection'}</button></div>
+      <div className="privacy-banner"><span>{i18n.language === 'tr' ? 'Araştırma demosu · Kişisel raporlar cihazınızda kalır' : 'Research demo · Personal reports stay on your device'}</span><button onClick={() => setSection('Privacy')}>{i18n.language === 'tr' ? 'Gizlilik ve veri koruma' : 'Privacy and data protection'}</button></div>
       {section === 'Privacy' ? <PrivacyCenter/> : section === 'Case library' ? <>
         <section className="page-heading"><div><div className="eyebrow">{t("BONE IMAGING, UNDERSTOOD.")}</div><h1>{t("Case library")}</h1><p>{t("Browse source-labelled BTXRD radiograph records. Select a case to load its original image and metadata.")}</p></div><div className="page-heading-actions"><button className="secondary-button" onClick={() => openAssistant(false)}><Icon name="spark" size={14}/>{' '}{t("Research assistant")}</button><a className="primary-button" href={datasetInfo.source_url} target="_blank" rel="noreferrer"><Icon name="external" size={15}/>{' '}{t("Dataset source")}</a></div></section>
         <section className="metrics">

@@ -8,7 +8,7 @@ The deferred review was resumed on 22 November 2026. Technical controls and depl
 
 The installed Chroma 1.5.9 product-telemetry `capture` implementation was inspected and is a no-op. This narrow observation does not establish that every dependency or provider makes no outbound connection. The prepared server unit additionally disables Hugging Face telemetry and enables offline embedding-cache loading; those settings require validation on the eventual server.
 
-Personal health-report processing is disabled. The public tunnel was stopped. Public relaunch is blocked until the operator's identity, contact channel, technical-data basis, provider arrangements and review are completed. Completing the configuration does **not** enable personal uploads.
+Server-side personal health-report upload/processing is disabled. Visitors can read personal PDF/TXT files and ask passage-search questions entirely in their browser. This is a data-minimisation design, not a legal exemption or certification. The public tunnel was stopped. Public relaunch is blocked until the operator's identity, contact channel, technical-data basis, provider arrangements and review are completed. Completing the configuration does **not** enable personal uploads.
 
 The app retains 60 published BTXRD image records, the unchanged ResNet-18 checkpoint and 638-chunk RAG index, and 34 published report excerpts. Published/open-licensed material is not automatically anonymous or exempt from data-protection law. The operator must review source provenance, research permissions and re-identification risks separately.
 
@@ -16,9 +16,9 @@ The app retains 60 published BTXRD image records, the unchanged ResNet-18 checkp
 
 | Area | Implementation | Boundary |
 |---|---|---|
-| Personal uploads | Legacy report routes return 403 before the application reads or parses the body, in local and public modes | Traffic may already have reached the network/provider; this is not a claim that a malicious submission can never reach infrastructure |
+| Personal reports | Browser-only PDF/TXT extraction and local passage search; no network submission, persistent browser storage or Qwen processing. Legacy server upload routes return 403 before body parsing | Traffic may already have reached the network/provider; this is not a claim that a malicious submission can never reach infrastructure |
 | Published examples | Server accepts an allowlisted source identifier and reads the bundled source file | No visitor document, filename or path accepted; no new saved report or report-session cache |
-| Assistant | Predefined question IDs, language and validated published-case ID only; extra fields forbidden | No personal-report context, pasted text or conversation history accepted through public endpoints |
+| Assistant | Editable questions, optional suggestions, language and validated published case/source ID; extra fields forbidden and body/field limits enforced | Question text reaches the server and its local Qwen model. The UI warns against identifiers or personal-health narratives, but warnings cannot prevent their inclusion. No chat-history or arbitrary report-context fields are accepted. Server/provider operational review remains necessary |
 | Notices | English/Turkish privacy centre, persistent restriction notice, version identifier | Incomplete Article 10 notice until the controller details and legal grounds are established |
 | Browser data | Language preference only; no new visitor-session cookies | Earlier signed cookies can identify only the owner's legacy data for erasure |
 | Erasure | Owner-scoped legacy erasure, cookie removal, local preference clearing | Other sessions, provider logs and backups require an operator procedure; deleting a file is not a certified forensic wipe |
@@ -50,4 +50,10 @@ The private example configuration is `deploy/privacy-config.example.json`. After
 
 Both `deploy/start_public_demo.py` and `backend.main` in public mode require the review. Do not populate approval fields with invented or placeholder information. No settings switch enables personal PDF/TXT uploads. That feature would require a separately reviewed implementation and deployment.
 
-Until the deferred review is completed, run the restricted app only on loopback for local review. The previous public URL is offline intentionally.
+Until the deferred review is completed, run the app on loopback for local review. The previous public URL is offline intentionally.
+
+## Restored workflows, 22 November 2026
+
+Custom questions are restored in the main assistant and in Report Analyser for published examples. The caller sends its own question and an allowlisted source ID; the server reconstructs source text rather than accepting arbitrary report context. Report chat does not require pretending that a published case report belongs to a BTXRD image. Browser-only personal documents and questions stay separate from server RAG. New questions/answers are not saved by the application; provider retention must still be verified. Research-chat warnings are not an anonymisation filter or a legal basis.
+
+PDF.js 6.5.438 was added with the owner’s express approval of this dependency exception. It is served from the same origin, including its worker. Only text extraction is used, with evaluation disabled, 5 MB / 80-page / extracted-text limits. Scanned and encrypted PDFs are rejected. The app does not implement OCR, personal-document LLM generation, diagnostic interpretation, or certified secure erasure. These limitations are displayed. Review browser extensions, shared-device access and source-document permissions separately.

@@ -91,5 +91,29 @@ class PublicAccessTests(unittest.TestCase):
         self.assertIn('controller_name',release_issues({}))
         self.assertIn('operator_review',release_issues({'approved_for_research_demo':False}))
 
+    def test_custom_question_uses_explicit_published_source_without_storage(self):
+        with patch('backend.rag_assistant.answer_question', return_value={'answer':'Synthetic test answer','citations':[]}) as answer:
+            response = self.a.post('/api/assistant/research', json={'question':'What does this report say about biopsy?', 'source_id':'PMC12981788'})
+            self.assertEqual(response.status_code, 200, response.text)
+            self.assertEqual(answer.call_args.args[0], 'What does this report say about biopsy?')
+            self.assertEqual(answer.call_args.kwargs['report_context']['published_source']['id'], 'PMC12981788')
+            self.assertEqual(self.a.get('/api/reports').json()['reports'], [])
+            self.assertNotIn('set-cookie', response.headers)
+
+    def test_custom_question_cannot_inject_personal_report_context(self):
+        with patch('backend.rag_assistant.answer_question', side_effect=AssertionError('Must not generate')):
+            for extra in [{'report_context':{'text':'PRIVATE TEST MARKER'}}, {'report_id':'private'}, {'conversation':[{'content':'PRIVATE TEST MARKER'}]}]:
+                result=self.a.post('/api/assistant/research',json={'question':'What is a biopsy?', **extra})
+                self.assertEqual(result.status_code,422)
+                self.assertNotIn('PRIVATE TEST MARKER',result.text)
+            self.assertEqual(self.a.post('/api/assistant/research',json={'question':'biopsy', 'source_id':'../private'}).status_code,404)
+            self.assertEqual(self.a.post('/api/assistant/research',json={'question':'x'*1201}).status_code,422)
+            self.assertEqual(self.a.post('/api/assistant/research',content=b'x'*8193).status_code,413)
+
+    def test_custom_case_and_heatmap_question_with_citations(self):
+        result=self.a.post('/api/assistant/research',json={'question':'Explain what the heatmap is showing', 'case_id':'BTXRD-IMG001868'})
+        self.assertEqual(result.status_code,200,result.text)
+        self.assertIn('CAM',[x['citation_id'] for x in result.json()['citations']])
+
 
 if __name__=='__main__':unittest.main()

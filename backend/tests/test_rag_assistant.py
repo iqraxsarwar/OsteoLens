@@ -35,6 +35,25 @@ class FakeCollection:
 
 
 class RAGAssistantTests(unittest.TestCase):
+    def test_published_report_requires_its_own_citation(self):
+        context = {'published_source':{'id':'SYNTHETIC','title':'Synthetic published report','url':'https://example.org/report','license':'test'},
+                   'filename':'synthetic.txt','has_matching_passages':True,
+                   'excerpts':[{'text':'Biopsy confirmed the synthetic finding.', 'page_number':2}],
+                   'excerpt_text':'[page 2] Biopsy confirmed the synthetic finding.'}
+        with patch('backend.rag_assistant._runtime', return_value=(FakeCollection(), FakeEmbedder(), object())), \
+             patch('backend.rag_assistant._generate', return_value=('The report gives general advice. [S1]', ['S1'])):
+            result = answer_question('What does this report say about biopsy?', report_context=context)
+        self.assertNotIn('general advice',result['answer'])
+        self.assertIn('Biopsy confirmed the synthetic finding.',result['answer'])
+        self.assertEqual([c['citation_id'] for c in result['citations']], ['RPT'])
+        self.assertEqual(result['citations'][0]['source_type'],'published_report')
+        self.assertEqual(result['citations'][0]['url'],'https://example.org/report')
+
+    def test_no_report_passage_does_not_substitute_general_literature(self):
+        with patch('backend.rag_assistant._retrieve',side_effect=AssertionError('Should not substitute literature')):
+            result=answer_question('What does this report say about chemotherapy?',report_context={'published_source':{'id':'synthetic'},'has_matching_passages':False})
+        self.assertEqual(result['status'],'insufficient_evidence')
+
     def test_case_summary_and_heatmap_do_not_require_literature_retrieval(self):
         with patch("backend.rag_assistant._retrieve", side_effect=AssertionError("Unexpected literature lookup")):
             summary = answer_question("Explain the available information for BTXRD-IMG001868.")

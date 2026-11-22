@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import mimetypes
 import os
 from pathlib import Path
 from typing import Any, Literal
@@ -28,6 +29,9 @@ PUBLIC_IMAGE_DIR = (PROJECT_ROOT / "public" / "images" / "btxrd").resolve()
 DEFAULT_CHECKPOINT = PROJECT_ROOT / "models" / "checkpoints" / "osteolens_btxrd_resnet18.pth"
 CHECKPOINT_PATH = Path(os.environ.get("OSTEOLENS_MODEL_PATH", DEFAULT_CHECKPOINT)).resolve()
 API_VERSION = "osteolens-inference-0.1.0"
+
+# Windows registry MIME mappings can otherwise serve the PDF worker as text/plain.
+mimetypes.add_type('text/javascript', '.mjs')
 
 app = FastAPI(title="OsteoLens Research Inference API", version=API_VERSION,
               docs_url=None if PUBLIC_MODE else "/docs", redoc_url=None if PUBLIC_MODE else "/redoc")
@@ -55,7 +59,9 @@ def get_privacy_status():
 
 class ResearchSelection(BaseModel):
     model_config = ConfigDict(extra='forbid')
-    question_id: Literal['compare_tumours','imaging','transition','benign_malignant','case_summary','heatmap','source_label','limitations']
+    question_id: Literal['compare_tumours','imaging','transition','benign_malignant','case_summary','heatmap','source_label','limitations'] | None = None
+    question: str | None = Field(default=None, min_length=1, max_length=1200)
+    source_id: str | None = Field(default=None, max_length=40)
     language: Literal['en','tr'] = 'en'
     case_id: str | None = Field(default=None, pattern=r'^BTXRD-IMG[0-9]{6}$')
 
@@ -63,15 +69,42 @@ class ResearchSelection(BaseModel):
 @app.post('/api/assistant/research')
 def selected_research_question(selection: ResearchSelection):
     from backend.rag_assistant import answer_question, RAGUnavailable
+    from backend.report_analyzer import select_report_context
+    if bool(selection.question_id) == bool(selection.question and selection.question.strip()):
+        raise HTTPException(422, 'Provide a question or a suggested question identifier.')
+    if selection.source_id and selection.case_id:
+        raise HTTPException(422, 'Choose one report or image context.')
     if selection.case_id and selection.case_id not in _get_cases():
         raise HTTPException(422, 'Select an available source case.')
     if selection.question_id in {'case_summary','source_label','limitations'} and not selection.case_id:
         raise HTTPException(422, 'Select a source case first.')
+    question = selection.question.strip() if selection.question else QUESTIONS[selection.question_id]
+    report_context = None
+    if selection.source_id:
+        report = analyze_published_example(selection.source_id)
+        search_question = question
+        if selection.language == 'tr':
+            from backend.language import english_search_query
+            try: search_question = english_search_query(question)
+            except RAGUnavailable as exc:
+                raise HTTPException(503, 'Research service unavailable. Please try again later.') from exc
+        report_context = select_report_context(report, search_question)
+        # Broad report requests should use actual source sentences, not retrieve
+        # generic literature just because the report lacks the word "summary".
+        import re
+        if re.search(r'\b(summary|summarize|summarise|findings|overview)\b', search_question, re.I):
+            excerpts = report['summary']['statements'][:5]
+            report_context.update(excerpts=excerpts,
+                excerpt_text='\n'.join(f"[page {item['page_number']}] {item['text']}" for item in excerpts),
+                has_matching_passages=bool(excerpts))
+        report_context['published_source'] = report['source']
     try:
-        return answer_question(QUESTIONS[selection.question_id], case_id=selection.case_id,
+        return answer_question(question, case_id=selection.case_id, report_context=report_context,
             model_result=_analysis_context_by_case.get(selection.case_id or ''), language=selection.language)
     except RAGUnavailable as exc:
         raise HTTPException(503, 'Research service unavailable. Please try again later.') from exc
+    except ValueError as exc:
+        raise HTTPException(422, 'Question context is invalid. Check the selected source or case.') from exc
 
 
 @app.post('/api/reports/examples/{source_id}')

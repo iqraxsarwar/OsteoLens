@@ -2,7 +2,7 @@
 
 **Bone imaging, understood.**
 
-**Privacy status — 22 November 2026:** personal report uploads and free-text chat are disabled in both local and public interfaces/APIs. The public demo is offline pending controller/contact, legal-basis and provider-transfer review. The research prototype is not certified KVKK-compliant. See [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md) for implemented controls and unresolved obligations.
+**Privacy status — 22 November 2026:** custom research questions and the published-report RAG assistant are available. Personal PDF/TXT documents can be read and searched entirely in the visitor’s browser; they are not uploaded to the backend. Browser report questions use passage retrieval, not Qwen generation. The public demo is offline pending controller/contact, legal-basis and provider-transfer review. The research prototype is not certified KVKK-compliant. See [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md) for implemented controls and unresolved obligations.
 
 See [QUALITY_ASSURANCE.md](QUALITY_ASSURANCE.md) for the latest tested/partial/unavailable feature status. A collection of synthetic-only Report Analyser fixtures is provided in [sample_reports/](sample_reports/README.md); these files are not BTXRD records and are never automatically linked to cases.
 
@@ -10,7 +10,7 @@ OsteoLens contains a source-linked library of 60 distinct BTXRD radiograph files
 
 ## English and Turkish
 
-Use the **English / Türkçe** controls in the header. The choice persists in this browser. Navigation, controls, case/heatmap explanations and report terminology are translated. Source quotations, publication titles and provenance remain in their original language. Research questions are chosen from a fixed menu, with answers requested in the selected language using the unchanged Qwen model. Translation quality is not clinically validated.
+Use the **English / Türkçe** controls in the header. The choice persists in this browser. Navigation, controls, case/heatmap explanations and report terminology are translated. Source quotations, publication titles and provenance remain in their original language. Research questions can be written freely, with answers requested in the selected language using the unchanged Qwen model. Translation quality is not clinically validated.
 
 The report analyser also offers **34 attributed CC BY 4.0 published case excerpts**, independent of the 60 BTXRD image records.
 
@@ -60,7 +60,7 @@ The Phase 3 Colab workflow and inference loader are in [`training/README.md`](tr
 
 ## Medical report analyser
 
-Choose **Report analyser**, then select one of the 34 published CC BY 4.0 case excerpts. The server reads its own allowlisted source file and returns extracted text, source-sentence summaries, structured findings and terminology. No visitor file is accepted and no new report is saved. The legacy PDF/TXT processing utilities remain for offline synthetic tests; their upload, saved-report retrieval, association and question APIs are blocked.
+Choose **Report analyser**, then select one of the 34 published CC BY 4.0 case excerpts. The server reads its own allowlisted source file and returns extracted text, source-sentence summaries, structured findings and terminology. The separate **My own report · on device** tab accepts text-containing PDF/TXT files up to 5 MB (PDF: up to 80 pages), with local passage search and a clear control. Scanned/encrypted PDFs are unsupported. Personal content is never automatically attached to server RAG. No new report is saved. The legacy PDF/TXT processing utilities remain for offline synthetic tests; their upload, saved-report retrieval, association and question APIs are blocked.
 
 The bilingual **Privacy and data protection** page explains the restricted mode, shows unresolved controller information, offers a locally downloaded rights-request draft and supports erasure of legacy uploads belonging to a verified old browser-session cookie. It does not claim to replace a complete Article 10 notice or a statutory rights process.
 
@@ -68,4 +68,4 @@ Validate with `python -m unittest discover -s backend/tests -v`. Tests cover rej
 
 ## RAG AI Assistant (Phase 6)
 
-RAG AI Assistant provides a fixed menu of literature, published-case and heatmap questions. Visitors cannot submit arbitrary text, files or personal report context. Report Analyser remains separate. The assistant uses a local sentence embedding model, persistent Chroma vectors, hybrid semantic/lexical retrieval, and an optional local Ollama generator. No paid API is used. Its ready state stays disabled until the RAG requirements are installed, permitted sources are ingested, and a local Ollama model is available. See [backend/README.md](backend/README.md) for setup, source licenses, evaluation, and case-context limits. Run the 24-question review set with `python -m backend.rag_eval`; human review is required and no medical accuracy score is claimed.
+RAG AI Assistant accepts editable questions about literature, published cases and heatmaps. Report Analyser includes the same custom-question assistant for its 34 published examples. Suggestions are optional. The server receives the current question and source identifiers, not browser-held personal report text or chat history. The assistant uses a local sentence embedding model, persistent Chroma vectors, hybrid semantic/lexical retrieval, and an optional local Ollama generator. No paid API is used. Its ready state stays disabled until the RAG requirements are installed, permitted sources are ingested, and a local Ollama model is available. See [backend/README.md](backend/README.md) for setup, source licenses, evaluation, and case-context limits. Run the 24-question review set with `python -m backend.rag_eval`; human review is required and no medical accuracy score is claimed.

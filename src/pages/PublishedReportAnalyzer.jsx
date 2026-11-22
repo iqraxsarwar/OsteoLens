@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next'
 import sources from '../data/openAccessReports.json'
 import { API_URL, apiFetch } from '../api'
 import './ReportAnalyzer.css'
+import ResearchAssistant from './GuidedResearchAssistant'
+import LocalReportPanel from './LocalReportPanel'
 
 export default function PublishedReportAnalyzer({ onPrivacy }) {
   const { t, i18n } = useTranslation()
@@ -11,6 +13,7 @@ export default function PublishedReportAnalyzer({ onPrivacy }) {
   const [report, setReport] = useState(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState(false)
+  const [mode, setMode] = useState('published')
   async function analyze() {
     setBusy(true); setError(false); setReport(null)
     try {
@@ -23,11 +26,12 @@ export default function PublishedReportAnalyzer({ onPrivacy }) {
     <div className="eyebrow">{tr ? 'YAYIMLANMIŞ ARAŞTIRMA ÖRNEKLERİ' : 'PUBLISHED RESEARCH EXAMPLES'}</div>
     <h1>{t('Medical report analyser')}</h1>
     <div className="privacy-notice" role="note">
-      <h2>{tr ? 'Kişisel rapor yükleme kapalı' : 'Personal report uploads are disabled'}</h2>
-      <p>{tr ? 'Bu araştırma demosu kişisel PDF/TXT sağlık raporlarını kabul etmez. Aşağıdaki açık erişimli yayımlanmış örnekleri inceleyebilirsiniz. Kimlik, iletişim veya sağlık bilgisi göndermeyin.' : 'This research demo does not accept personal PDF/TXT medical reports. You can analyse the published open-access examples below. Do not submit identity, contact or health information.'}</p>
+      <h2>{tr ? 'Yayımlanmış örnekler veya kendi raporunuz' : 'Published examples or your own report'}</h2>
+      <p>{tr ? 'Yayımlanmış örneklerle RAG asistanına kendi sorunuzu sorabilirsiniz. Kendi belgenizi cihazda rapor modunda açın; kişisel rapor sunucuya yüklenmez.' : 'Ask the RAG assistant your own questions about published examples. Open your own document in on-device report mode; personal reports are not uploaded to the server.'}</p>
       <button className="secondary-button" onClick={onPrivacy}>{tr ? 'Gizlilik ve veri koruma' : 'Privacy and data protection'}</button>
     </div>
-    <section className="report-saved-library">
+    <div className="rag-mode-switch" role="group" aria-label={tr ? 'Rapor modu' : 'Report mode'}><button className={mode==='published'?'selected':''} onClick={()=>setMode('published')}>{tr ? 'Yayımlanmış örnekler' : 'Published examples'}</button><button className={mode==='personal'?'selected':''} onClick={()=>setMode('personal')}>{tr ? 'Kendi raporum · cihazda' : 'My own report · on device'}</button></div>
+    {mode==='personal' ? <LocalReportPanel/> : <><section className="report-saved-library">
       <h2>{t('Open-access case reports')}</h2>
       <p>{tr ? `${sources.length} yayımlanmış olgu özeti. Yalnızca seçilen kaynak kimliği sunucuya gönderilir; cihazınızdan dosya alınmaz. Örneğin analizi yeni bir kullanıcı raporu olarak kaydedilmez.` : `${sources.length} published case excerpts. Only the selected source identifier is sent to the server; no file is read from your device. Analysing an example does not create a saved user report.`}</p>
       <div className="report-source-controls">
@@ -61,5 +65,7 @@ export default function PublishedReportAnalyzer({ onPrivacy }) {
         </section>
       </div>
     </div>}
+    {report && <ResearchAssistant key={report.source.id} source={report.source} onPrivacy={onPrivacy}/>}
+    </>}
   </section>
 }
